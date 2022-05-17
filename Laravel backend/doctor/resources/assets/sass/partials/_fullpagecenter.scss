@@ -1,0 +1,29 @@
+// Full page center ... Center page for signup, signin, error page to show content in center
+.fullpage-flex-center {
+    // overflow: auto;
+    .full-height {
+        height: 100vh;
+    }
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .top-right {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+    }
+    .links>a {
+        color: color('blue-grey', 'lighten-5');
+        padding: 0 25px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .m-b-md {
+        margin-bottom: 30px;
+    }
+}

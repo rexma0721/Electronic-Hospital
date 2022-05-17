@@ -1,0 +1,82 @@
+/*ANIMATIONS*/
+
+.close-aside {
+    -webkit-transform: rotateZ(0deg);
+    animation-delay: 0s, 5s;
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+    transition: 0.5s ease-in-out;
+}
+
+.open-aside {
+    -webkit-transform: rotateZ(-90deg);
+    animation-delay: 0s, 5s;
+    -ms-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    transition: 0.5s ease-in-out;
+}
+
+.transition-main-leave {
+    padding-left: 0;
+    -webkit-transition: padding 1s;
+}
+
+.transition-main-enter {
+    padding-left: $left-sb-width;
+    /* HOVER ON */
+    -webkit-transition: padding 0.2s;
+}
+
+.transition-main-leave2 {
+    padding-left: 0;
+    -webkit-transition: padding 1s;
+}
+
+.transition-main-enter2 {
+    padding-left: $iconized-left-mr;
+    /* HOVER ON */
+    -webkit-transition: padding 0.2s;
+}
+
+.transition-main-horizontalAct {
+    padding-left: 0;
+    /* HOVER ON */
+    -webkit-transition: padding 1s;
+}
+
+.iconized-body-enter {
+    width: $left-sb-width;
+    left: $iconized-menu-width;
+    opacity: 1;
+    transition: left 0.1s, visibility 0.1s;
+    transition-property: left;
+    transition-duration: 0.1s;
+    transition-timing: ease;
+    transition-delay: 0;
+    visibility: visible;
+}
+
+.iconized-body-leave {
+    width: 0;
+    left: 0;
+    opacity: 0;
+    transition-property: left;
+    transition-duration: 0.1s;
+    transition-timing: ease;
+    transition-delay: 0.1s;
+    visibility: hidden;
+}
+
+.move-right {
+    left: $left-sb-width;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing: linear;
+}
+
+.move-left {
+    left: $iconized-menu-width;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing: linear;
+}

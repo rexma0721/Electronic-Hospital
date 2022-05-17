@@ -1,0 +1,234 @@
+//colors
+$black: black;
+$color_sail_approx: #b3d4fc;
+$color_pampas_approx: rgba(241, 241, 241, .70);
+$slate_gray: slategray;
+$color_mountain_mist_approx: #999;
+$color_cardinal_pink_approx: #905;
+$color_limeade_approx: #4caf50;
+$color_barley_corn_approx: #a67f59;
+$white_50: hsla(0, 0%, 100%, .5);
+$color_deep_cerulean_approx: #07a;
+$color_cabaret_approx: #dd4a68;
+$color_california_approx: #e90;
+//fonts
+$font_0: Inconsolata;
+$font_1: Monaco;
+$font_2: Consolas;
+$font_3: Andale Mono;
+$font_4: monospace;
+//@extend-elements
+//original selectors
+//code[class*="language-"], pre[class*="language-"]
+%extend_1 {
+    color: $black;
+    font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    //Instead of the line below you could use @include word-break($value)
+    word-break: normal;
+    line-height: 1.4;
+    tab-size: 4;
+    //Instead of the line below you could use @include hyphens($value)
+    hyphens: none;
+}
+
+code[class*="language-"] {
+    @extend %extend_1;
+    ::-moz-selection {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        background: $color_sail_approx;
+    }
+    ::selection {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        background: $color_sail_approx;
+    }
+}
+
+pre[class*="language-"] {
+    @extend %extend_1;
+    // padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    padding: 10px;
+    background: $color_pampas_approx;
+    position: relative;
+    ::-moz-selection {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        background: $color_sail_approx;
+    }
+    ::selection {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+        background: $color_sail_approx;
+    }
+    &:before {
+        position: absolute;
+        padding: 1px 5px;
+        background: #e8e6e3;
+        top: 0;
+        left: 0;
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        color: #555;
+        content: attr(class);
+        font-size: .9rem;
+        border: solid 1px rgba(51, 51, 51, 0.12);
+        border-top: none;
+        border-left: none;
+    }
+}
+
+pre[class*="language-"]::-moz-selection {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    background: $color_sail_approx;
+}
+
+code[class*="language-"]::-moz-selection {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    background: $color_sail_approx;
+}
+
+pre[class*="language-"]::selection {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    background: $color_sail_approx;
+}
+
+code[class*="language-"]::selection {
+    //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    text-shadow: none;
+    background: $color_sail_approx;
+}
+
+@media print {
+    code[class*="language-"] {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+    }
+    pre[class*="language-"] {
+        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        text-shadow: none;
+    }
+}
+
+.token {
+    &.comment {
+        color: $slate_gray;
+    }
+    &.prolog {
+        color: $slate_gray;
+    }
+    &.doctype {
+        color: $slate_gray;
+    }
+    &.cdata {
+        color: $slate_gray;
+    }
+    &.punctuation {
+        color: $color_mountain_mist_approx;
+    }
+    &.property {
+        color: $color_cardinal_pink_approx;
+    }
+    &.tag {
+        color: $color_cardinal_pink_approx;
+    }
+    &.boolean {
+        color: $color_cardinal_pink_approx;
+    }
+    &.number {
+        color: $color_cardinal_pink_approx;
+    }
+    &.constant {
+        color: $color_cardinal_pink_approx;
+    }
+    &.symbol {
+        color: $color_cardinal_pink_approx;
+    }
+    &.deleted {
+        color: $color_cardinal_pink_approx;
+    }
+    &.selector {
+        color: $color_limeade_approx;
+    }
+    &.attr-name {
+        color: $color_limeade_approx;
+    }
+    &.string {
+        color: $color_limeade_approx;
+    }
+    &.char {
+        color: $color_limeade_approx;
+    }
+    &.builtin {
+        color: $color_limeade_approx;
+    }
+    &.inserted {
+        color: $color_limeade_approx;
+    }
+    &.operator {
+        color: $color_barley_corn_approx;
+        background: $white_50;
+    }
+    &.entity {
+        color: $color_barley_corn_approx;
+        background: $white_50;
+        cursor: help;
+    }
+    &.url {
+        color: $color_barley_corn_approx;
+        background: $white_50;
+    }
+    &.atrule {
+        color: $color_deep_cerulean_approx;
+    }
+    &.attr-value {
+        color: $color_deep_cerulean_approx;
+    }
+    &.keyword {
+        color: $color_deep_cerulean_approx;
+    }
+    &.function {
+        color: $color_cabaret_approx;
+    }
+    &.regex {
+        color: $color_california_approx;
+    }
+    &.important {
+        color: $color_california_approx;
+        font-weight: bold;
+    }
+    &.variable {
+        color: $color_california_approx;
+    }
+}
+
+.namespace {
+    opacity: .7;
+}
+
+:not(pre)>code[class*="language-"] {
+    background: $color_pampas_approx;
+    // padding: .1em;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: .3em;
+    padding: 2px 5px;
+}
+
+.language-css .token.string {
+    color: $color_barley_corn_approx;
+    background: $white_50;
+}
+
+.style .token.string {
+    color: $color_barley_corn_approx;
+    background: $white_50;
+}

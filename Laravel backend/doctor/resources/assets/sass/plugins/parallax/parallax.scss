@@ -1,0 +1,135 @@
+@import "../../../../node_modules/materialize-css/sass/components/mixins";
+@import "../../../../node_modules/materialize-css/sass/components/color";
+
+// Variables;
+@import "../../../../node_modules/materialize-css/sass/components/variables";
+@import "../../partials/variables";
+//colors
+$color_tundora_approx: #444;
+$color_jungle_green_approx: #26a69a;
+$white_90: rgba(255,255,255,.9);
+nav {
+	.brand-logo {
+		color: $color_tundora_approx;
+	}
+	ul a {
+		color: $color_tundora_approx;
+	}
+}
+p {
+	line-height: 2rem;
+}
+.button-collapse {
+	color: $color_jungle_green_approx;
+}
+.parallax-main {
+	min-height: 380px;
+	height: auto;
+	color: $white_90;
+	.section {
+		width: 100%;
+	}
+	.pinned {
+	    position: fixed !important;
+	}
+	.toc-wrapper{
+		position: fixed !important;
+    	// margin-top: 42px;
+		.table-of-contents{
+		}
+	}
+	p{
+		line-height: 1.5rem;
+		font-size: 15px;
+		padding:0;
+		color: rgba(0,0,0,0.71);
+		-webkit-font-smoothing:antialiased;
+		&.promo-caption {
+		    font-size: 1.7rem !important;
+		    font-weight: 500;
+		    margin-top: 5px;
+		    margin-bottom: 0;
+		    color : #4db6ac;
+		}
+		&.caption{
+			font-size: 1.25rem;
+			font-weight: 300;
+			margin-bottom: 18.75px;
+			line-height: 1.5rem;
+		}
+	}
+	.short-panel{
+		padding: 10px;
+		color:#FFF;
+	}
+	span{
+		&.information{
+			line-height: 1.2rem;
+			font-size: 14px;
+			padding:0;
+			color: rgba(0,0,0,0.71);
+			-webkit-font-smoothing:antialiased;
+		}
+	}
+	h4{
+		&.content-headline{
+			margin-top: 0 !important;
+			color:$primary-color;
+		}
+	}
+	h5{
+		&.content-headline{
+			color: $secondary-color;
+			padding: 11.25px 0;
+		}
+		+p {
+			margin-bottom: 10px !important;
+		}
+	}
+	
+}
+@media only screen and(max-width : 992px) {
+	.parallax-container .section {
+		position: absolute;
+		top: 40%;
+	}
+	#index-banner .section {
+		top: 10%;
+	}
+}
+@media only screen and(max-width : 600px) {
+	#index-banner .section {
+		top: 0;
+	}
+}
+.icon-block {
+	padding: 0 15px;
+	.material-icons {
+		font-size: inherit;
+	}
+}
+footer.page-footer {
+	margin: 0;
+}
+// CUSTOM CSS
+ul{
+	&.chart-list{
+		li{
+			color:$color_tundora_approx;
+			.collapsible-body{
+				padding:  2rem;
+				p{
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+input,textarea{
+	color: rgba(0, 0, 0, 0.71);
+	-webkit-font-smoothing: antialiased;
+	font-size: 15px;	
+}
+.row{
+	color:rgba(0,0,0,0.87);
+}

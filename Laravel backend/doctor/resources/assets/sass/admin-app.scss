@@ -1,0 +1,98 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Forge Admin template
+Version:	1.0
+Last change:	23/07/2017 [Improving Code Readability]
+Assigned to:	Hexesis
+Primary use:	Forge Admin Template 
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[main.scss Table of contents]
+
+1. Variables (Theme Varialbles)
+2. Palette (Color Palette of the theme)
+3. Mixins (Helpful scss mixin)
+4. MaterialCSS (Import node dependacny SCSS)
+5. Material design icons (Material Icon set from MDI)
+6. animate css (Aminate css import)
+7. Base (Base HTML element CSS) / html, body
+8. Animations(Custom amination based on css transitions) / Custom transitions
+9. morph icons (Transformable icons)/ play, pause, stop, menu, close, plus, minus, more, topArrow, bottomArrow, notify, rightArrow, leftArrow, checked, heart
+10. typeahead
+11. fontfaces (Fontface styles)
+12. elements / nav,p,h1,h2,h3,h4,h5,h6,caption, chips, navigate, etc...
+13. helpers / position, overlay, text-transform, etc...
+14. content-main / main, .main-header, .main-container, footer, .action-ex-opts
+15. topnav / .full-top-nav,#sidebar-iconized-collapse , #sidebar-default-collapse , .iconizedToggle, .app-logo
+16. notification_nav / header, .notification-sidebar, .horizontal-navigations
+17. sidenav / .sidescollable, .vertical-navigations
+18. themeSettingSidebar /.themeSetting
+19. scrollbar / .ps__scrollbar-y, .ps__scrollbar-y-rail, .ps__scrollbar-x-rail
+20. demo
+21. fullpagecenter / .fullpage-flex-center
+22. errorPage  / .error-code
+23. inputfields / .input-field, .informatic-input, .rounded-input, .box-input, .materialize-tags
+24. mediaQuery 
+25. lockscreen / .page-lock
+26. cards
+27. datatable
+28. magnific-gallery
+29. userprofile
+30. blog
+31. timeline 
+32. dashboard : Dashboard specific css
+33. weather-icons : Weather Icons specific Styles
+34. preloaders : Preloader on the page
+-------------------------------------------------------------------*/
+
+@import "partials/variables";
+@import "partials/palette";
+@import "partials/mixins";
+@import "~materialize-css/sass/ghpages-materialize";
+@import "~mdi/css/materialdesignicons";
+@import "~animate.css/animate.min";
+@import "partials/base";
+@import "partials/animations";
+@import "partials/morph";
+@import "partials/typeahead";
+@import "partials/fontfaces";
+@import "partials/elements";
+@import "partials/helpers";
+@import "partials/content-main";
+@import "partials/topnav";
+@import "partials/notification_nav";
+@import "partials/sidenav";
+@import "partials/themeSettingSidebar";
+@import "partials/scrollbar";
+@import "partials/demo";
+@import "partials/fullpagecenter";
+@import "partials/errorPage";
+@import "partials/inputfields";
+@import "partials/mediaQuery";
+@import "partials/lockscreen";
+// COMPONENTS
+// ===========================================================
+@import "components/cards/base";
+@import "components/cards/users";
+@import "components/cards/statistic";
+@import "components/cards/weather";
+// ===========================================================
+@import "components/datatable";
+@import "components/magnific-gallery";
+@import "components/userprofile";
+@import "components/blog";
+@import "components/timeline";
+@import "components/dashboard";
+// WEATHER
+// ===========================================================
+@import "components/weather-icons/weather-icons";
+@import "components/weather-widgets/type1";
+@import "components/weather-widgets/type2";
+// loaders
+// ===========================================================
+@import "components/preloaders/load-overlay";
+@import "components/preloaders/loader-4balls";
+@import "custom";

@@ -1,0 +1,441 @@
+// VARIABLES ...
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Color Palette
+	- Primary
+	- Secondary
+	- Waves (primary/secondary)
+	- Success
+	- Error
+	- Warning
+	- Information
+2. Sidebar (Import theme) dark/light
+3. BODY
+4. BREADCRUMB based props
+5. Navigation Bar
+6. Side Navigation
+7. Tables (Base)
+8. Toasts
+9. Typography
+10. Header Styles
+11. Footer
+12. CARD
+13. content-headline
+14. HEAD
+15. Top nav right menu
+16. LOGO
+17. Left Sidebar
+18. SideNav Header
+19. Left sidebar User section
+18. ICONIZED Menu Variables
+19. MORPH
+20. CALANDER COlor
+21. Horizontal Nav
+22. Notification (Base)
+23. Top nav messages chat
+24. CHAT COLOR
+25. Notification
+26. Right sidebar Tasks
+27. MAIN
+28. CHARTS
+29. BREADRUMB
+30. PAGE SECTION
+31. INPUTS
+32. TYPEAHEAD
+33. Select 2
+34. Profile
+35. TIMELINE
+36. FAB MENU
+37. DATATABLE
+	-Thread
+	- Body
+	- tfoot
+38. DATATABLE PAGINATION
+	- NAVS
+	- NORMAL
+	- INFO
+39. USER WIDGET
+40. Other variables
+------------------------------------------------------------------*/
+
+// PRIMARY
+// ==========================================================================
+$primary-color: #2a56c6;
+$primary-color-light:#6a82fa;
+$primary-color-dark:#002e94;
+// SECONDARY COLOR
+// ==========================================================================
+$secondary-color: #e91e63;
+$secondary-color-light:#ff6090;
+$secondary-color-dark:#b0003a;
+$primary-wave:rgba(42, 86, 198, 0.65);
+$secondary-wave:rgba(233, 30, 99, 0.65);
+// COLOR PALETTE
+// ==========================================================================
+$success-color: #4caf50;
+$success-color-light: #80e27e;
+$success-color-dark: #087f23;
+$success-on-text: #000000;
+$error-color: #f44336;
+$error-color-light: #ff7961;
+$error-color-dark: #ba000d;
+$error-on-text: #000000;
+$warning-color: #ff9800;
+$warning-color-light: #ffc947;
+$warning-color-dark: #c66900;
+$warning-on-text: #000000;
+$info-color: #00bcd4;
+$info-color-light: #62efff;
+$info-color-dark: #008ba3;
+$info-on-text: #000000;
+// SIDEBAR - HORIZONTAL NAV:THEME
+// ==========================================================================
+@import "sb-dark";
+// BODY
+// ==========================================================================
+$body-color: #EDF1F5;
+$header-color: #FFF;
+// BREADCRUMB
+// ==========================================================================
+$breadcrumb-color: #FFF;
+// 13. Navigation Bar
+// ==========================================================================
+$navbar-height: 64px;
+$navbar-line-height: $navbar-height;
+$navbar-height-mobile: 56px;
+$navbar-line-height-mobile: $navbar-height-mobile;
+$navbar-font-size: 1rem;
+$navbar-font-color: #fff;
+$navbar-brand-font-size: 2.1rem;
+// 14. Side Navigation
+// ==========================================================================
+$sidenav-font-size: 14px;
+$sidenav-bg-color: $sidenav-color;
+$sidenav-padding: 16px;
+$sidenav-item-height: 48px;
+$sidenav-line-height: $sidenav-item-height;
+$sidnav-collapsible-color: $sidenav-color-dark;
+// 18. Tables
+// ==========================================================================
+$table-border-color: #d0d0d0;
+$table-striped-color: #f2f2f2;
+// 19. Toasts
+// ==========================================================================
+$toast-height: 48px;
+$toast-color: #323232;
+$toast-text-color: #fff;
+// 20. Typography
+// ==========================================================================
+$off-black: rgba(0, 0, 0, 0.87);
+// Header Styles
+$h1-fontsize: 4.2rem;
+$h2-fontsize: 3.56rem;
+$h3-fontsize: 2.92rem;
+$h4-fontsize: 2.28rem;
+$h5-fontsize: 1.64rem;
+$h6-fontsize: 1rem;
+// 21. Footer
+// ==========================================================================
+$footer-bg-color: $primary-color;
+// FORGE
+$base-theme-color:$primary-color;
+$main-content-header-bg:#FFF;
+$setWave:primary;
+// CARD
+$card-margin-bottom:23px; // Must match to gutter space i.e. $main-gtr
+$card-margin-top:0px;
+// content-headline
+$h4-content-headline-mt:5px;
+$h4-content-headline-mb:0;
+$h4-content-headline-mlr:0;
+// Default
+$font-size:14px;
+$sidebar-font-size:18px;
+$scroll-bar-width:3px;
+$scroll-bar-height:3px;
+$prefix-active:$base-theme-color;
+// HEAD
+$head-nav-bg: $base-theme-color;
+$head-nav-textColor: #ffffff;
+$head-nav-height:64px;
+// Top nav right menu
+$nav-rt-profile-width:200px;
+$nav-rt-profile-height:257px;
+$nav-rt-profile-menu-height:35px;
+$nav-rt-profile-menu-color:#424242;
+$nav-rt-profile-menu-bg:none;
+$nav-rt-profile-menuColor-hover:$base-theme-color;
+$nav-rt-profile-menuBg-hover:#FFF;
+// LOGO
+$defaultMenu-logo-bg:none; // Logo bg
+$logo-text-color:#FFF; // Logo text color
+$lsb-logo-h:25px;
+$logo-font-size:28px;
+// LEFT : SB
+$sb-items-font-size:15px !default;
+$left-sb-width: 260px; // Left sidebar width
+$default-left-mr:220px; // defaulr menu margin
+$left-sb-bg: $sidenav-color; // Left sidebat bg
+$left-sb-text:$sidenav-font-color; // Left sidebar text color
+$lsb-collapsible-head-span-font-weight:400 !default;
+$lsb-collapsible-body-bb:#fff; // Left sidebat collapsebody bg
+$left-sb-font-size: 13px; // left sidebat font-size
+$left-sb-height: 44px; // left sidebar height
+$left-sb-lineheight: 44px; // left sidear line-height
+$left-sb-icon-mrg-left:10px;
+$left-sb-icon-mrg-right:10px;
+$left-sb-span-mg-left:0px;
+// Side Nav Header
+$navigation-header-left:20px;
+$navigation-header-fontweight:300;
+$navigation-header-mt:8px;
+// LOGO
+// LSB USR
+$lsb-usr-profile-tb-space:10px;
+$lsb-usr-profile-bg:none;
+$lsb-usr-profile-hover-bg:none;
+$lsb-usr-profile-header-h:50px;
+$lsb-usr-profile-name:25px;
+$lsb-user-option-item-wh:25px;
+$lsb-usr-options-w:calc(25px * 3);
+$lsb-usr-options-h:50px;
+$lsb-user-option-item-hover:$primary-color;
+// ICONIZED
+$iconized-menu-width:50px; // iconize -leftsidebar width
+$iconized-left-mr:50px; // iconized body margin
+// MORPH
+$morph-small: 0.6em !important;
+$morph-medium: 1.8em;
+$morph-large: 3em;
+$morph-default-bg:#424242;
+$morph-default-color:transparent;
+$morph-notification-clr:#FFF;
+$morph-toggleMenu-clr:#FFF;
+$morph-iconizedMenu-clr:#FFF;
+// MORPH ENDS
+// CALANDER COlor
+$cal-grey:#666;
+$cal-dark-grey:#444;
+//  Horizontal Nav
+$horz-menu-link:64px;
+$horz-items-font-size:15px !default;
+$horz-collapsible-head-span-font-weight:400 !default;
+$horz-item-height:40px;
+$horz-icon-tb-pad:5px;
+$horz-icon-lr-pad:15px;
+$horz-bg:$sidenav-color;
+$horz-hor_sub-collection_width:260px;
+$horz-sb-activeIcon-color:$base-theme-color; // Left active sidebar icon color
+$horz-menu-font-size:20px;
+// Notification
+$notification-tab-text:#FFF;
+$notification-tab-bg:#212121;
+// Top-nav-msgs-chat
+$nav-msgs-mh:320px;
+$nav-msgs-w:320px;
+$chat-usr-name-color:#424242;
+$nav-msgs-content-clr:#FFF;
+$nav-msgs-content-clr-msg:#757575;
+$nav-msgs-time-clr:#a8a8a8;
+$nav-msgs-contentline-height: 1.2rem;
+$nav-msg-head-foot-brd:#F1F1F1;
+$nav-msg-head-color:#9e9e9e;
+$nav-msg-footer-color:#9e9e9e;
+$nav-notification-list_pad:10px;
+// CHAT COLOR
+$chat-status-onlineClr:#00e676;
+$chat-status-offlineClr:#9e9e9e;
+$chat-status-awayClr:#ffeb3b;
+$chat-status-busyClr:#c62828;
+$chat-status-brd:#FFF;
+$chat-status-badgeBg:#FFF;
+$chat-status-badgeBrd:$base-theme-color;
+$chat-status-badgeClr:#424242;
+// Notification
+$notify-status-onlineClr:#00e676;
+$notify-status-offlineClr:#9e9e9e;
+$notify-status-awayClr:#ffeb3b;
+$notify-status-busyClr:#c62828;
+$notify-status-brd:#FFF;
+$notify-status-badgeBg:#FFF;
+$notify-status-badgeBrd:$base-theme-color;
+$notify-status-badgeClr:#424242;
+$notify-msgs-content-clr:#f0f0f0;
+$notify-msgs-time-clr:#a8a8a8;
+$notify-usr-name-color:#F0F0F0;
+$notification-block-bg:#ccc;
+$rsb-width:300px;
+// RSB Task
+$rsb-task-bg:#212121;
+$rsb-task-move-bg:#424242;
+// MAIN
+$main-gtr:12px;
+// CHARTS
+// NVD3
+$card-title-height:40px;
+$card-title-primary-bg:$nav-rt-profile-menu-color;
+$card-title-primary-color:#FFF;
+$card-title-action-color:#FFF;
+// CHARTS ENDS
+// BREADRUMB
+$breadcrumb-height: 35px;
+$breadcrumb-bg-color: $main-content-header-bg;
+$breadcrumb-font-size:16px;
+$breadcrumb-fontw:normal;
+$breadcrumb-txt-color: #757575;
+$breadcrumb-activetxt-color:$primary-color;
+$breadcrumb-content-font-size:24px;
+$breadcrumb-content-color: #212121;
+$breadcrumb-content: '\E5CC';
+$breadcrumb-content-fontw: 500;
+// PAGE SECTION
+$sec-page-bg:$main-content-header-bg;
+$sec-page-height:40px;
+$sec-page-border-color:#c2c2c2;
+$page-title-font:24px;
+$page-title-color:#212121;
+$page-page-opt-dropBtn-color:$head-nav-bg;
+// INPUTS - Label
+$informatice-input-mb:5px;
+$informatice-input-span-textcolor:rgba(0, 0, 0, 0.71);
+$input-border-color:#757575;
+$input-label-color:#757575;
+$input-label-font-weight:500;
+$input-border-hover-color:$secondary-color;
+$input-border-focus-color:$secondary-color;
+$input-label-focus-color:$secondary-color;
+$input-valid-color:#4caf50;
+$input-invalid-color:#f44336;
+$input-disabled-color: rgba(0, 0, 0, .50);
+$select-disabled-color: rgba(0, 0, 0, .50);
+// TYPEAHEAD
+$tt-menu-bg:#fff;
+$tt-menu-borderColor:#ccc;
+$tt-suggestion-hover-TextColor: #fff;
+$tt-suggestion-hover-Bg: $base-theme-color;
+$tt-cusror-color: #fff;
+$tt-cusror-bg: $base-theme-color;
+//Select 2
+$white: white;
+$color_silver_chalice_approx: #aaa;
+$color_tundora_approx: #444;
+$color_mountain_mist_approx: #999;
+$color_suva_gray_approx: #888;
+$color_gallery_approx: #eee;
+$color_mercury_approx: #e4e4e4;
+$color_mine_shaft_approx: #333;
+$black: black;
+$color_alto_approx: #ddd;
+$color_cornflower_blue_approx: $primary-color;
+$color_black_haze_approx: #f7f7f7;
+$color_celeste_approx: #cccccc;
+$color_fuscous_gray_approx: #555;
+$gray: grey;
+$color_royal_blue_approx: #1de9b6;
+// Profile
+$profile-coverPic-height:350px;
+$proifilePic-profileCover:120px;
+$user-profile-tabs-bg: $primary-color;
+// TIMELINE
+$timeline-liner-color:$secondary-color;
+$post-content-bg:#FFF;
+$timeline-post-title-color:#616161;
+$post-footer-color:#c6c6c6;
+$post-footer-iLColor:$secondary-color;
+$post-footer-iRColor:$secondary-color;
+$timeline-post-dropdown-content-height:35px;
+$timeline-user-dp-width:100px;
+$timeline-post-header-height:37px;
+$timeline-post-options-color:#424242;
+$timeline-post-options-iLColor:$secondary-color;
+$timeline-post-options-iRColor:$secondary-color;
+$timeline-post-dropdown-content-color:#424242;
+$timeline-post-dropdown-content-iColor:#424242;
+$timeline-post-dropdown-content-hoverBG:#c3c3c3;
+$timeline-foot-border-top: #c3c3c3;
+$timeline-post-text-border: $secondary-color;
+$post-footer-opt-height:25px;
+// FAB MENU
+$post-react-action-height:25px;
+$post-react-action-width:25px;
+$post-react-action-ul:25px;
+// Custom  : Thor
+$profile-card-widget-height:285px;
+$widget1-height:140px;
+// DATATABLE : Thread
+$dt-thread-border-btm:#000;
+$dt-thread-border-radius:0;
+$dt-thread-color: #909090;
+// DATATABLE : Body
+$dt-tbody-row-border-radius:0;
+$dt-tbody-row-odd: #eceff1;
+$dt-tbody-row-even: #cfd8dc;
+$dt-tbody-row-odd-sort:#eceff1;
+$dt-tbody-row-even-sort:#cfd8dc;
+// DATATABLE : tfoot
+$dt-tfoot-border-btm:#000;
+$dt-tfoot-border-radius:0;
+$dt-tfoot-color:#909090;
+// DATATABLE PAGINATION :NAVS
+$dt-pagination-navs-clr:#fff;
+$dt-pagination-navs-bg:$primary-color;
+$dt-pagination-disabled-navs-clr:#FFFFFF;
+$dt-pagination-disabled-navs-bg:$primary-color-light;
+// DATATABLE PAGINATION : NORMAL
+$dt-pagination-clr:#fff;
+$dt-pagination-bg: #cfd8dc;
+$dt-selection-tr:#80cbc4;
+// DATATABLE PAGINATION : INFO
+$dataTables_info-clr:#212121;
+$table-action-btn-height:40px;
+// USER WIDGET
+$usr-widget-type1-internal-action-height:35px;
+$usr-widget-type2-internal-actionBtm-height:35px;
+$lock-bg:#424242;
+$lock-width:500px;
+$lock-height:200px;
+$lock-logo-section-height:52px;
+$lock-profile-pic-hw:147px;
+$error-bg:#424242;
+$error-width:301px;
+$error-height:250px;
+$error-logo-section-height:0px;
+$error-profile-pic-hw:147px;
+$theme-svg-w:126px;
+$preloader-overlay-z:9999;
+// VARIABLES
+$font-size-base: 14px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
+$border-radius-base: 3px !default;
+$border-radius-small: 2px !default;
+$border-radius-large: 6px !default;
+$border-radius-huge: 10px !default;
+$border-radius-label: 12px !default;
+$border-radius-extreme: 30px !default;
+$font-size-h1: 3.8em !default;
+$font-size-h2: 2.6em !default;
+$font-size-h3: 1.825em !default;
+$font-size-h4: 1.3em !default;
+$font-size-h5: 1.25em !default;
+$font-size-h6: 1em !default;
+$font-paragraph: 16px !default;
+$font-size-navbar: 16px !default;
+$font-size-small: 12px !default;
+// $dash-card-body-text: color('grey','lighten-2');
+$dash-card-body-text: #FFF;
+$dash-card-image-headline: #4db6ac;
+$dash-card-body-background: #FFF;
+$margin-base: 15px !default;
+$padding-base: 15px !default;
+// #################################
+// BACKGROUND IMG PATH
+// ###############################
+$signin-bg-path:url('/images/background-repeat/footer_lodyas.png');
+// #################################
+// FONTS PATH
+// ###############################
+$wi-path:"/fonts"; // WEATHER ICONS FONTS PATH
+$anurati-fonts-path:url('/fonts/anurati/anurati-regular-webfont.woff2') format('woff2'),
+url('/fonts/anurati/anurati-regular-webfont.woff') format('woff');

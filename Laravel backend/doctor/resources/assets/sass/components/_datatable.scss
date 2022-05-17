@@ -1,0 +1,183 @@
+// Datatable  ...
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Wrapper (Wrapper class of datatable) / .dataTables_wrapper
+	- Filter / .dataTables_filter
+	- Material Class / .mat-datatable
+	- info class  / .dataTables_info
+	- paginate class  /.dataTables_paginate
+
+------------------------------------------------------------------*/
+
+.dataTables_wrapper {
+    // Show entries
+    .dataTables_length {}
+    // Search Filter
+    .dataTables_filter {
+        text-align: left;
+        input {
+            margin-left: 0 !important;
+        }
+    }
+    // Actual Table
+    .mat-datatable {
+        // background: red;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+        thead {
+            tr {
+                th {
+                    border-bottom: 1px solid $dt-thread-border-btm !important;
+                    border-radius: $dt-thread-border-radius !important;
+                    color: $dt-thread-color;
+                }
+            }
+            &.no-border {
+                tr {
+                    th {
+                        border: 0 !important;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                &.odd {
+                    background: $dt-tbody-row-odd;
+                    background-color: $dt-tbody-row-odd !important;
+                    .sorting_1 {
+                        background: $dt-tbody-row-odd-sort;
+                        background-color: $dt-tbody-row-odd-sort !important;
+                    }
+                }
+                &.even {
+                    background: $dt-tbody-row-even;
+                    background-color: $dt-tbody-row-even !important;
+                    .sorting_1 {
+                        background: $dt-tbody-row-even-sort;
+                        background-color: $dt-tbody-row-even-sort !important;
+                    }
+                }
+                td {
+                    border-radius: $dt-tbody-row-border-radius;
+                }
+            }
+        }
+        tfoot {
+            tr {
+                th {
+                    // border-top: 1px solid $dt-tfoot-border-btm !important;
+                    border-radius: $dt-tfoot-border-radius !important;
+                    color: $dt-tfoot-color;
+                }
+            }
+        }
+    }
+    .dataTables_info {
+        color: $dataTables_info-clr;
+    }
+    .dataTables_paginate {
+        .paginate_button {
+            @extend .waves-effect,
+            .waves-light;
+            color: $primary-color !important;
+            background: $dt-pagination-bg;
+            background-color: $dt-pagination-bg;
+            &:hover {
+                background: $secondary-color-light !important;
+                font-weight: bold;
+                border-color: $secondary-color-light !important;
+            }
+            &.current {
+                font-weight: bold;
+                color: #FFFFFF !important;
+                background: $secondary-color !important;
+                background-color: $secondary-color !important;
+                border-color: $secondary-color-light !important;
+                &:hover {
+                    color: #FFF !important;
+                    background: $secondary-color !important;
+                    border-color: $secondary-color-light !important;
+                }
+            }
+            &.previous,
+            &.next {
+                color: $dt-pagination-navs-clr !important;
+                background: $dt-pagination-navs-bg !important;
+                background-color: $dt-pagination-navs-bg !important;
+                &:hover {
+                    border-color: $dt-pagination-navs-bg !important;
+                    font-weight: normal;
+                    color: #FFF !important;
+                }
+                &.disabled {
+                    color: $dt-pagination-disabled-navs-clr !important;
+                    background: $dt-pagination-disabled-navs-bg !important;
+                    background-color: $dt-pagination-disabled-navs-bg !important;
+                    &:hover {
+                        border-color: $dt-pagination-disabled-navs-bg !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dataTable {
+    tbody {
+        tr {
+            &.success {
+                transition: background-color 0.15s ease-in-out 0s;
+                background: $dt-selection-tr !important;
+                background-color: $dt-selection-tr !important;
+                td {
+                    &.sorting_1 {
+                        transition: background-color 0.15s ease-in-out 0s;
+                        background: $dt-selection-tr !important;
+                        background-color: $dt-selection-tr !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// July 12,2016 Ends
+table {
+    tbody {
+        tr {
+            td {
+                span {
+                    &.table-badge {
+                        padding: 5px;
+                        border-radius: 5px;
+                        color: #fff;
+                    }
+                }
+                .action-btns {
+                    @extend .center;
+                    a.btn-floating {
+                        height: 30px;
+                        width: 30px;
+                        margin: 0 2px;
+                        &:first-child,
+                        &.last-child {
+                            margin: 0;
+                        }
+                        &.open-action {
+                            background: rgba(0, 191, 165, 0.9);
+                        }
+                        i {
+                            font-size: 1.3rem;
+                            height: 30px;
+                            width: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

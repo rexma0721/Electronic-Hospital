@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <meta name="generator" content=""/>
+    <title>Doctor</title>
+  </head>
+  <body>
+    <div style="float: left; width: 100%; margin: 20px 0;">
+      <div style="width: 100%; margin:auto; max-width:630px;">
+        <div style="float: left; width:100%; text-align:center">
+          <img style="padding-bottom: 10px;" src="{{asset('addbyme/images/doctor.png')}}" alt="doctor" width="80">
+        </div>
+        <div style="float: left; width: 100%; text-align: center; margin-bottom: 30px;">
+          <span style="font-family: Poppins; font-style: normal; font-weight: 600; font-size: 26px; line-height: 22px; text-align: center; color: #253858;">eHospital</span>
+        </div>
+        <div style="float:left; width: 100%; background: #FFFFFF; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25); border-radius: 0; border-top:5px solid #595959; padding: 15px;">
+          <div style="float:left; width: 100%; display: block;">
+            <img src="{{asset('addbyme/images/bell.png')}}" alt="bell" width="40" style="display: inline-block; vertical-align:middle;">
+            <span style="font-family: IRANSansWeb; font-style: normal; font-weight: bold; font-size: 30px; line-height:  43px; display:inline-block; text-align: right; color: #535353;  vertical-align:middle; padding: 5px 10px;">ﻣﺮﺣﺒﺎ</span>
+            <h2 style="font-family: Tahoma; font-style: normal; font-weight: bold; font-size: 26px; line-height:37px; display:inline-block;  color: #535353;  vertical-align:middle; margin:0;">{{$name1}}</h2>
+          </div>
+          <div style="float:left; width: 100%; display: block;">
+            <h2 style="display:inline-block; vertical-align:middle; font-family: IRANSansWeb; font-style: normal; font-weight: bold; font-size: 24px; line-height: 34px; color: #535353;"><img src="{{asset('addbyme/images/right-mark.png')}}" alt="mark" style="display: inline-block; vertical-align: middle; padding-left:10px;">ﻗﺎﻡ ﺍﻟﻄﺒﻴﺐ <span>{{$name2}}</span> ﺑﺎﻻﺟﺎﺑﺔ ﻋﻠﻰ ﺳﺆﺍﻟﻚ
+          </div>
+          <div style="float: left; width: 100%; display: block; margin-top: 40px; margin-bottom: 125px;">
+            <div style="padding:15px 25px; background: #00AA4E; border-radius: 3px; display: block; margin: auto;  max-width:220px;">
+              <span style=" font-family: IRANSansWeb; font-style: normal; font-weight: bold; font-size: 24px; line-height:34px; color: #FFFFFF; display: inline-block; vertical-align: middle;"><img src="{{asset('addbyme/images/arrow.png')}}" alt="arrow" style="display: inline-block; vertical-align: middle;">ﺗﻔﺎﺻﻴﻞ ﺍﻻﺳﺘﺸﺎﺭﺓ</span>
+              </div>
+          </div>
+          <div style="float: left; width: 100%; display: block;">
+            <h2 style="font-family: IRANSansWeb; font-style: normal; font-weight: bold; font-size: 30px; line-height: 43px; text-align:center; color: #253858; margin: 0; padding-bottom: 10px;">ﺍﻟﻤﺴﺘﺸﻔﻰ ﺍﻻﻟﻜﺘﺮﻭﻧﻲ ﺍﻟﻌﺎﻟﻤﻲ</h2>
+          </div>
+          <div style="display: block; margin: auto; text-align: center;  float: left; width: 100%;">
+            <div style="padding: 0 25px;">
+              <h2 style="display: block; border-bottom: 1px solid #253858; padding-bottom: 25px; margin: 0; font-family: IRANSansWeb; font-style: normal; font-weight: normal; font-size: 24px; line-height: 34px; text-align: center; color: #253858; margin-bottom: 25px;">ﺧﺪﻣﺔ ﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻄﺒﻴﺔ ﺍﻟﻤﻮﺛﻘﺔ</h2>
+            </div>
+          </div>
+          <div style="display: block; margin: auto; text-align: center; padding: 15px 25px;">
+            <ul style="display: block; padding-right: 0;">
+              <li style="display: inline-block; padding:0 4px;"><a href="#"><img src="{{asset('addbyme/images/instagram.png')}}" width="30" height="" alt="video"></a></li>
+              <li style="display: inline-block; padding:0 4px;"><a href="#"><img src="{{asset('addbyme/images/twitter.png')}}" width="30" height="" alt="video"></a></li>
+              <li style="display: inline-block; padding:0 4px;"><a href="#"><img src="{{asset('addbyme/images/facebook.png')}}" width="30" height="" alt="audio"></a></li>
+              <li style="display: inline-block; padding:0 4px;"><a href="#"><img src="{{asset('addbyme/images/youtube.jpg')}}" width="30" height="" alt="chat"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

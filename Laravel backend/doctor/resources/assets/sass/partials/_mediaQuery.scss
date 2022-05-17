@@ -1,0 +1,171 @@
+/* ************** MEDIA QUERY ************** */
+
+@media #{$small-and-down} {
+    // styles for small screens and down
+    .signin-wrapper,
+    .signup-wrapper {
+        width: calc(100% - 16px) !important;
+    }
+    .logo-section {
+        width: 65px !important;
+        height: 65px !important;
+        img {
+            margin: auto;
+            height: 45px !important;
+        }
+    }
+    //  User profile
+    .profile-wrapper {
+        .profile-cover {
+            position: relative;
+            .profile-coverPic {
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                height: 250px;
+                z-index: -1;
+            }
+            .profile-content {
+                .profile-left-container {
+                    top: 250px/2 - 90px/2;
+                    a.user-profilelink {
+                        img.proifile-pic {
+                            height: 90px;
+                            width: 90px;
+                        }
+                    }
+                    .user-info {
+                        .user-fullname {
+                            margin-left: 10px;
+                        }
+                        .user-location {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .profile-right-container {
+                    top: calc(250px / 2 - 90px / 2);
+                }
+            }
+        }
+    }
+    //  User Profile Ends
+    .page-lock {
+        .page-lock-wrap {
+            top: calc(-#{$lock-height} + 20px);
+            .row {
+                .logo-section {
+                    text-align: center;
+                }
+                .lock-content {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .themeSetting.active {
+        width: $rsb-width;
+    }
+    .statistic-table {
+        thead {
+            tr {
+                th {
+                    min-height: 60px;
+                    text-align: left;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    width: 100% !important;
+                    display: block;
+                    float: left !important;
+                    min-height: 60px !important;
+                    text-align: left !important;
+                    vertical-align: middle !important;
+                }
+            }
+        }
+    }
+
+    .modal{
+        &.small{
+            width: 100%;
+        }
+        &.medium{
+            width: 100%;
+        }
+        &.large{
+            width: 100%;
+        }
+    }
+}
+
+@media #{$medium-and-up} {
+    // styles for medium screens and larger
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 800px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .statistic-table {
+        thead {
+            tr {
+                th {
+                    min-height: 60px;
+                    text-align: left;
+                    &.hide-on-small-only {
+                        display: none;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    display: block;
+                    min-height: 60px !important;
+                    vertical-align: middle !important;
+                    &.hide-on-small-only {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$medium-and-down} {
+    // styles for medium screens and down
+    // MAX Width 992px
+    .transition-main-leave {
+        padding-left: 0;
+        -webkit-transition: padding 1s;
+    }
+    .transition-main-enter {
+        padding-left: 0px;
+        /* HOVER ON */
+        -webkit-transition: padding 1s;
+    }
+    .transition-main-leave2 {
+        padding-left: 0;
+        -webkit-transition: padding 1s;
+    }
+    .transition-main-enter2 {
+        padding-left: 0px;
+        /* HOVER ON */
+        -webkit-transition: padding 1s;
+    }
+    #top-nav-msgs,
+    #top-nav-msgsweb {
+        left: 0 !important;
+    }
+}
+
+@media #{$large-and-up} {
+    // styles for large screens and up
+}
+
+
+/* ************** MEDIA QUERY ENDs************** */

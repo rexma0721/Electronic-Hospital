@@ -1,0 +1,31 @@
+// Dashboard  ...
+.project-status {
+    @include border-radius(3px);
+    color: #FFF;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+th {
+    &.expand_more {
+        width: 10%;
+    }
+    &.user-th {
+        width: 40%;
+    }
+    &.description-th {
+        width: 50%;
+    }
+    &.application-th {
+        width: 70%;
+    }
+    &.time-th {
+        width: 30%;
+    }
+}
+
+tr {
+    &.height-60 {
+        height: 60px;
+    }
+}

@@ -1,0 +1,12 @@
+/**********************************************************
+ * Optional removal of spinners on numeric input boxes.   *
+ * Recommended for consistent cross-browser input widths. *
+ **********************************************************/
+ 
+/* Webkit: Android, Chrome, iOS, Safari */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;   /* display: none alt can crash on hover */
+    margin: 0px;                /* sometimes margin is left for spinner */
+}

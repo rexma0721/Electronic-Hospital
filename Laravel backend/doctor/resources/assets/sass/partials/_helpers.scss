@@ -1,0 +1,186 @@
+// HELPERS .....
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Position
+	- .pos-relative
+	- .pos-absolute
+2. Background
+	- .no-bg
+3. Visibility
+	- .invisible
+	- .grey-transparent
+4. Aligment
+	- .no-mrpd
+5. Overlay
+	- .has-overlay
+6. Text Transformation
+	- .capitalize-text
+	- .lowercase-text
+	- .uppercase-text
+	- .small-caps-tex
+------------------------------------------------------------------*/
+
+$i-horz-item-area:25px;
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+}
+
+.no-bg {
+    background: none !important;
+}
+
+.block-ele {
+    display: block !important;
+}
+
+.invisible {
+    opacity: 0;
+    display: none;
+}
+
+.jqstooltip {
+    width: auto !important;
+    height: auto !important;
+}
+
+.no-mrpd {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+i {
+    &.large-x {
+        font-size: 8rem;
+    }
+    &.large-2x {
+        font-size: 10rem;
+    }
+}
+
+.has-overlay {
+    position: relative;
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        z-index: 2;
+    }
+    img {
+        &.overit {
+            z-index: 2;
+        }
+    }
+}
+
+.overlay1 {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.grey-transparent {
+    background: rgba(33, 33, 33, 0.60);
+}
+
+.overlay {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.50;
+}
+
+.capitalize-text {
+    text-transform: capitalize;
+}
+
+.lowercase-text {
+    text-transform: lowercase;
+}
+
+.uppercase-text {
+    text-transform: uppercase;
+}
+
+.small-caps-text {
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+
+.section {
+    padding: 0;
+}
+
+.pin-top50 {
+    top: 50px!important;
+}
+
+.halfway-up-fab {
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    transform: translateY(-70%);
+}
+
+.largehalfway-center-fab {
+    position: absolute;
+    right: 24px;
+    top: calc( 50% + 12px);
+    transform: translateY(-70%);
+}
+
+.sticky-bottom {
+    padding: 15px 0 0 0;
+}
+
+.sticky-bottom-lr {
+    padding: 15px 10px 0 10px;
+}
+
+.collection-horz-item {
+    @extend .no-mrpd;
+    border: none;
+    line-height: $i-horz-item-area;
+    height: $i-horz-item-area;
+    width: $i-horz-item-area;
+    text-align: center;
+    display: inline-block;
+}
+
+ul.horz {
+    border: none;
+    @extend .no-mrpd;
+    .collection-item {
+        @extend .collection-horz-item,
+        .transparent;
+        margin: 0 5px;
+        a {
+            @extend .collection-horz-item;
+        }
+    }
+}
+
+span {
+    &.ago-time {
+        position: absolute;
+        bottom: 2rem;
+        left: 24px;
+        color: color("grey", "lighten-1");
+    }
+}

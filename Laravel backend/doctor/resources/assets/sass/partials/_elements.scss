@@ -1,0 +1,157 @@
+// Elements .. HTML and theme elemtns styling
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. nav and side nav / nav,.side-nav
+2. caption
+3. p
+4. h1,h2,h3,h4,h5,h6 
+5. chips
+6. navigate
+7. dropdown-content
+------------------------------------------------------------------*/
+
+nav,
+.side-nav {
+    // background-color:  !important;
+    a,
+    .collapsible-header,
+    .collapsible-header span {
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+    }
+    .collapsible-body {
+        padding: 0;
+    }
+    ul li a:hover,
+    ul li.active {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.fixed-action-btn {
+    z-index: 996;
+}
+
+.caption {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+}
+
+.clear {
+    clear: both;
+}
+
+p {
+    color: #000;
+    padding: 0;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    line-height: 1.5rem;
+    font-size: 15px;
+    &.box {
+        padding: 20px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.bold>a {
+    font-weight: bold;
+}
+
+.preview {
+    background-color: #FFF;
+    border: 1px solid #eee;
+    padding: 20px 20px;
+}
+
+ul.cb-series {
+    display: block;
+    width: inherit;
+    li {
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.chips {
+    .input {
+        background: none;
+        border: 0;
+        color: rgba(0, 0, 0, 0.6);
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 500;
+        height: 32px;
+        margin-right: 20px;
+        line-height: 32px;
+        outline: 0;
+        padding: 0 !important;
+        width: 120px !important;
+    }
+}
+
+.navigate {
+    height: 48px;
+    display: block;
+    background: #e3e3e3;
+    white-space: nowrap;
+    line-height: 45px;
+    padding-right: 10px;
+}
+
+.image-hover-effect,
+.img-gallary-section {
+    margin-bottom: 25px;
+}
+
+.dropdown-content {
+    li {
+        a {
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.help-block {
+    display: block;
+    margin-top: -12px;
+    font-weight: 300;
+}
+.modal{
+    &.small{
+        width: 400px;
+    }
+    &.medium{
+        width: 500px;
+    }
+    &.large{
+        width: 600px;   
+    }
+}
+
+#assign-role-permission-vue{
+    .collection{
+        .collection-item{
+            cursor: pointer;
+            &.active{
+                background: color('grey', 'lighten-2');
+            }
+        }
+    }
+}

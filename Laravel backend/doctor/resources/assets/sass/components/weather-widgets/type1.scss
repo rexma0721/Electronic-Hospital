@@ -1,0 +1,613 @@
+//colors
+$black: #000;
+$white: #ffffff;
+$white_10: rgba(255, 255, 255, 0.1);
+$color_gallery_approx: #eeeeee;
+$white_80: rgba(255, 255, 255, 0.8);
+$color_gorse_approx: #ffee44;
+$yellow_20: rgba(255, 255, 0, 0.2);
+$color_celeste_approx: #cccccc;
+$color_coral_red_approx: #fb323c;
+$color_tree_poppy_approx: #f99716;
+$color_candlelight_approx: #fee124;
+$color_inch_worm_approx: #afdf2e;
+$color_turquoise_blue_approx: #6ad7f8;
+$color_cornflower_blue_approx: #60b1f5;
+$color_medium_red_violet_approx: #a3459b;
+$color_log_cabin_approx: #222222;
+$yellow : yellow;
+$color_wild_sand_approx: #f5f5f5;
+$color_tapa_approx: #777;
+$color_cerulean_approx: #00bbff;
+$color_scooter_approx: #2eb5e5;
+$color_mercury_approx: #e6e6e6;
+$color_goldenrod_approx: #f3d166;
+$color_steel_gray_approx: #222233;
+$color_tundora_approx: #444444;
+$color_pastel_green_approx: #85db8c;
+.weather-pos {
+    z-index: 2;
+}
+
+.sunny {
+    animation: sunny 15s linear infinite;
+    @include linear-gradient(to top, rgba(255, 255, 255, 0) 0, $white_80 50%, rgba(255, 255, 255, 0) 100%) height: 140px;
+    width: 20px;
+    margin-left: -15px;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (140px/2));
+        left: calc(50% - (20px/2));
+    }
+    &.top-left {
+        left: 90px;
+        top: 20px;
+    }
+    &.top-right {
+        right: 90px;
+        top: 20px;
+    }
+    &.bottom-left {
+        left: 90px;
+        bottom: 20px;
+    }
+    &.bottom-right {
+        right: 90px;
+        bottom: 20px;
+    }
+    &:before {
+        @include linear-gradient(to top, rgba(255, 255, 255, 0) 0, $white_80 50%, rgba(255, 255, 255, 0) 100%) content: '';
+        height: 140px;
+        width: 20px;
+        opacity: 1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(90deg);
+    }
+    &:after {
+        background: $color_gorse_approx;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $yellow_20 0 0 0 15px;
+        content: '';
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        left: -30px;
+        top: 30px;
+    }
+}
+
+@keyframes sunny {
+    0% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(0deg);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(360deg);
+    }
+}
+
+.cloudy {
+    animation: cloudy 5s ease-in-out infinite;
+    background: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $white 65px -15px 0 -5px, $white 25px -25px, $white 30px 10px, $white 60px 15px 0 -10px, $white 85px 5px 0 -5px;
+    height: 50px;
+    width: 50px;
+    margin-left: -60px;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (50px/2));
+        left: calc(50% - (50px/2));
+    }
+    &.top-left {
+        left: 90px;
+        top: 70px;
+    }
+    &.bottom-left {
+        left: 90px;
+        bottom: 50px;
+    }
+    &.top-right {
+        right: 90px;
+        top: 70px;
+    }
+    &.bottom-right {
+        right: 120px;
+        bottom: 50px;
+    }
+    &:after {
+        animation: cloudy_shadow 5s ease-in-out infinite;
+        // background: $black;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        content: '';
+        height: 15px;
+        width: 120px;
+        opacity: 0.2;
+        position: absolute;
+        left: 5px;
+        bottom: -60px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+}
+
+@keyframes cloudy {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes cloudy_shadow {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(20px) scale(.7);
+        opacity: .05;
+    }
+}
+
+.rainy {
+    animation: rainy 5s ease-in-out infinite 1s;
+    background: $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $color_celeste_approx 65px -15px 0 -5px, $color_celeste_approx 25px -25px, $color_celeste_approx 30px 10px, $color_celeste_approx 60px 15px 0 -10px, $color_celeste_approx 85px 5px 0 -5px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: -60px;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (50px/2));
+        left: calc(50% - (50px/2));
+    }
+    &.top-left {
+        left: 100px;
+        top: 70px;
+    }
+    &.bottom-left {
+        left: 100px;
+        bottom: 50px;
+    }
+    &.top-right {
+        right: 100px;
+        top: 70px;
+    }
+    &.bottom-right {
+        right: 120px;
+        bottom: 50px;
+    }
+    &:after {
+        animation: rainy_shadow 5s ease-in-out infinite 1s;
+        // background: $black;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        content: '';
+        height: 15px;
+        width: 120px;
+        opacity: 0.2;
+        position: absolute;
+        left: 5px;
+        bottom: -60px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+    &:before {
+        animation: rainy_rain .7s infinite linear;
+        content: '';
+        background: $color_celeste_approx;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        display: block;
+        height: 6px;
+        width: 3px;
+        opacity: 0.3;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(.9);
+    }
+}
+
+@keyframes rainy {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rainy_shadow {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(20px) scale(.7);
+        opacity: 0.05;
+    }
+}
+
+@keyframes rainy_rain {
+    0% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: rgba(0, 0, 0, 0) 30px 30px, rgba(0, 0, 0, 0) 40px 40px, $black 50px 75px, $black 55px 50px, $black 70px 100px, $black 80px 95px, $black 110px 45px, $black 90px 35px;
+    }
+    25% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $black 30px 45px, $black 40px 60px, $black 50px 90px, $black 55px 65px, rgba(0, 0, 0, 0) 70px 120px, rgba(0, 0, 0, 0) 80px 120px, $black 110px 70px, $black 90px 60px;
+    }
+    26% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $black 30px 45px, $black 40px 60px, $black 50px 90px, $black 55px 65px, rgba(0, 0, 0, 0) 70px 40px, rgba(0, 0, 0, 0) 80px 20px, $black 110px 70px, $black 90px 60px;
+    }
+    50% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $black 30px 70px, $black 40px 80px, rgba(0, 0, 0, 0) 50px 100px, $black 55px 80px, $black 70px 60px, $black 80px 45px, $black 110px 95px, $black 90px 85px;
+    }
+    51% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $black 30px 70px, $black 40px 80px, rgba(0, 0, 0, 0) 50px 45px, $black 55px 80px, $black 70px 60px, $black 80px 45px, $black 110px 95px, $black 90px 85px;
+    }
+    75% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $black 30px 95px, $black 40px 100px, $black 50px 60px, rgba(0, 0, 0, 0) 55px 95px, $black 70px 80px, $black 80px 70px, rgba(0, 0, 0, 0) 110px 120px, rgba(0, 0, 0, 0) 90px 110px;
+    }
+    76% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $black 30px 95px, $black 40px 100px, $black 50px 60px, rgba(0, 0, 0, 0) 55px 35px, $black 70px 80px, $black 80px 70px, rgba(0, 0, 0, 0) 110px 25px, rgba(0, 0, 0, 0) 90px 15px;
+    }
+    100% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: rgba(0, 0, 0, 0) 30px 120px, rgba(0, 0, 0, 0) 40px 120px, $black 50px 75px, $black 55px 50px, $black 70px 100px, $black 80px 95px, $black 110px 45px, $black 90px 35px;
+    }
+}
+
+.rainbow {
+    animation: rainbow 5s ease-in-out infinite;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 170px 0 0 0;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $color_coral_red_approx -2px -2px 0 1px, $color_tree_poppy_approx -4px -4px 0 3px, $color_candlelight_approx -6px -6px 0 5px, $color_inch_worm_approx -8px -8px 0 7px, $color_turquoise_blue_approx -10px -10px 0 9px, $color_cornflower_blue_approx -12px -12px 0 11px, $color_medium_red_violet_approx -14px -14px 0 13px;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (70px/2));
+        left: calc(50% - (70px/2));
+    }
+    &.top-left {
+        left: 70px;
+        top: 50px;
+    }
+    &.bottom-left {
+        left: 70px;
+        bottom: 50px;
+    }
+    &.top-right {
+        right: 100px;
+        top: 70px;
+    }
+    &.bottom-right {
+        right: 100px;
+        bottom: 10px;
+    }
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(40deg);
+    &:after {
+        animation: rainbow_shadow 5s ease-in-out infinite;
+        // background: $black;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        content: '';
+        opacity: 0.2;
+        height: 15px;
+        width: 120px;
+        position: absolute;
+        bottom: -23px;
+        left: 17px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-40deg);
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 50% 50%;
+    }
+}
+
+@keyframes rainbow {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(50deg);
+    }
+}
+
+@keyframes rainbow_shadow {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-50deg) translate(10px) scale(.7);
+        opacity: 0.05;
+    }
+}
+
+.starry {
+    animation: starry_star 5s ease-in-out infinite;
+    background: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $white 26px 7px 0 -1px, $white_10 -36px -19px 0 -1px, $white_10 -51px -34px 0 -1px, $white -52px -62px 0 -1px, $white 14px -37px, $white_10 41px -19px, $white 34px -50px, $white_10 14px -71px 0 -1px, $white 64px -21px 0 -1px, $white_10 32px -85px 0 -1px, $white 64px -90px, $white_10 60px -67px 0 -1px, $white 34px -127px, $white_10 -26px -103px 0 -1px;
+    height: 4px;
+    width: 4px;
+    margin-left: -10px;
+    opacity: 1;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (4px/2));
+        left: calc(50% - (4px/2));
+    }
+    &.top-left {
+        left: 80px;
+        top: 140px;
+    }
+    &.bottom-left {
+        left: 80px;
+        bottom: 20px;
+    }
+    &.top-right {
+        right: 80px;
+        top: 140px;
+    }
+    &.bottom-right {
+        right: 80px;
+        bottom: 20px;
+    }
+    &:after {
+        animation: starry 5s ease-in-out infinite;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $white -25px 0;
+        content: '';
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: -106px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-5deg);
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 0 50%;
+    }
+}
+
+@keyframes starry {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes starry_star {
+    50% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $white_10 26px 7px 0 -1px, $white -36px -19px 0 -1px, $white -51px -34px 0 -1px, $white_10 -52px -62px 0 -1px, $white_10 14px -37px, $white 41px -19px, $white_10 34px -50px, $white 14px -71px 0 -1px, $white_10 64px -21px 0 -1px, $white 32px -85px 0 -1px, $white_10 64px -90px, $white 60px -67px 0 -1px, $white_10 34px -127px, $white -26px -103px 0 -1px;
+    }
+}
+
+.stormy {
+    animation: stormy 5s ease-in-out infinite;
+    background: $color_log_cabin_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $color_log_cabin_approx 65px -15px 0 -5px, $color_log_cabin_approx 25px -25px, $color_log_cabin_approx 30px 10px, $color_log_cabin_approx 60px 15px 0 -10px, $color_log_cabin_approx 85px 5px 0 -5px;
+    height: 50px;
+    width: 50px;
+    margin-left: -70px;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (50px/2));
+        left: calc(50% - (50px/2));
+    }
+    &.top-left {
+        left: 90px;
+        top: 50px;
+    }
+    &.bottom-left {
+        left: 90px;
+        bottom: 50px;
+    }
+    &.top-right {
+        right: 100px;
+        top: 50px;
+    }
+    &.bottom-right {
+        right: 100px;
+        bottom: 50px;
+    }
+    &:after {
+        animation: stormy_shadow 5s ease-in-out infinite;
+        // background: $black;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        content: '';
+        height: 15px;
+        width: 120px;
+        opacity: 0.2;
+        position: absolute;
+        left: 5px;
+        bottom: -60px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+    &:before {
+        animation: stormy_thunder 2s steps(1, end) infinite;
+        border-left: 0 solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 43px solid $yellow;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $yellow -7px -32px;
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 57px;
+        top: 70px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(14deg);
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 50% -60px;
+    }
+}
+
+@keyframes stormy {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes stormy_shadow {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(20px) scale(.7);
+        opacity: 0.05;
+    }
+}
+
+@keyframes stormy_thunder {
+    0% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(20deg);
+        opacity: 1;
+    }
+    5% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-34deg);
+        opacity: 1;
+    }
+    10% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    15% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-34deg);
+        opacity: 0;
+    }
+}
+
+.snowy {
+    animation: snowy 5s ease-in-out infinite 1s;
+    background: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: $white 65px -15px 0 -5px, $white 25px -25px, $white 30px 10px, $white 60px 15px 0 -10px, $white 85px 5px 0 -5px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: -60px;
+    position: absolute;
+    &.wid-center {
+        top: calc(50% - (50px/2));
+        left: calc(50% - (50px/2));
+    }
+    &.top-left {
+        left: 90px;
+        top: 50px;
+    }
+    &.bottom-left {
+        left: 90px;
+        bottom: 50px;
+    }
+    &.top-right {
+        right: 100px;
+        top: 50px;
+    }
+    &.bottom-right {
+        right: 100px;
+        bottom: 50px;
+    }
+    &:after {
+        animation: snowy_shadow 5s ease-in-out infinite 1s;
+        // background: $black;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        content: '';
+        height: 15px;
+        width: 120px;
+        opacity: 0.2;
+        position: absolute;
+        left: 8px;
+        bottom: -60px;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1);
+    }
+    &:before {
+        animation: snowy_snow 2s infinite linear;
+        content: '';
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 50%;
+        display: block;
+        height: 7px;
+        width: 7px;
+        opacity: 0.8;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(.9);
+    }
+}
+
+@keyframes snowy {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes snowy_shadow {
+    50% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(20px) scale(.7);
+        opacity: 0.05;
+    }
+}
+
+@keyframes snowy_snow {
+    0% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: rgba(238, 238, 238, 0) 30px 30px, rgba(238, 238, 238, 0) 40px 40px, $color_gallery_approx 50px 75px, $color_gallery_approx 55px 50px, $color_gallery_approx 70px 100px, $color_gallery_approx 80px 95px, $color_gallery_approx 110px 45px, $color_gallery_approx 90px 35px;
+    }
+    25% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $color_gallery_approx 30px 45px, $color_gallery_approx 40px 60px, $color_gallery_approx 50px 90px, $color_gallery_approx 55px 65px, rgba(238, 238, 238, 0) 70px 120px, rgba(238, 238, 238, 0) 80px 120px, $color_gallery_approx 110px 70px, $color_gallery_approx 90px 60px;
+    }
+    26% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $color_gallery_approx 30px 45px, $color_gallery_approx 40px 60px, $color_gallery_approx 50px 90px, $color_gallery_approx 55px 65px, rgba(238, 238, 238, 0) 70px 40px, rgba(238, 238, 238, 0) 80px 20px, $color_gallery_approx 110px 70px, $color_gallery_approx 90px 60px;
+    }
+    50% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $color_gallery_approx 30px 70px, $color_gallery_approx 40px 80px, rgba(238, 238, 238, 0) 50px 100px, $color_gallery_approx 55px 80px, $color_gallery_approx 70px 60px, $color_gallery_approx 80px 45px, $color_gallery_approx 110px 95px, $color_gallery_approx 90px 85px;
+    }
+    51% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $color_gallery_approx 30px 70px, $color_gallery_approx 40px 80px, rgba(238, 238, 238, 0) 50px 45px, $color_gallery_approx 55px 80px, $color_gallery_approx 70px 60px, $color_gallery_approx 80px 45px, $color_gallery_approx 110px 95px, $color_gallery_approx 90px 85px;
+    }
+    75% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $color_gallery_approx 30px 95px, $color_gallery_approx 40px 100px, $color_gallery_approx 50px 60px, rgba(238, 238, 238, 0) 55px 95px, $color_gallery_approx 70px 80px, $color_gallery_approx 80px 70px, rgba(238, 238, 238, 0) 110px 120px, rgba(238, 238, 238, 0) 90px 110px;
+    }
+    76% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: $color_gallery_approx 30px 95px, $color_gallery_approx 40px 100px, $color_gallery_approx 50px 60px, rgba(238, 238, 238, 0) 55px 35px, $color_gallery_approx 70px 80px, $color_gallery_approx 80px 70px, rgba(238, 238, 238, 0) 110px 25px, rgba(238, 238, 238, 0) 90px 15px;
+    }
+    100% {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: rgba(238, 238, 238, 0) 30px 120px, rgba(238, 238, 238, 0) 40px 120px, $color_gallery_approx 50px 75px, $color_gallery_approx 55px 50px, $color_gallery_approx 70px 100px, $color_gallery_approx 80px 95px, $color_gallery_approx 110px 45px, $color_gallery_approx 90px 35px;
+    }
+}

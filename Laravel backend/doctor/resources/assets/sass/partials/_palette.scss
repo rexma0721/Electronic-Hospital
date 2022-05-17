@@ -1,0 +1,153 @@
+// THEME COLOR PALETTE
+.primary-bg {
+    background: $primary-color !important;
+    background-color: $primary-color !important;
+    &.light {
+        background: $primary-color-light !important;
+        background-color: $primary-color-light !important;
+    }
+    &.dark {
+        background: $primary-color-dark !important;
+        background-color: $primary-color-dark !important;
+    }
+}
+
+.secondary-bg {
+    background: $secondary-color !important;
+    background-color: $secondary-color !important;
+    &.light {
+        background: $secondary-color-light !important;
+        background-color: $secondary-color-light !important;
+    }
+    &.dark {
+        background: $secondary-color-dark !important;
+        background-color: $secondary-color-dark !important;
+    }
+}
+
+.success-bg {
+    background: $success-color !important;
+    background-color: $success-color !important;
+    &.light {
+        background: $success-color-light !important;
+        background-color: $success-color-light !important;
+    }
+    &.dark {
+        background: $success-color-dark !important;
+        background-color: $success-color-dark !important;
+    }
+}
+
+.error-bg {
+    background: $error-color !important;
+    background-color: $error-color !important;
+    &.light {
+        background: $error-color-light !important;
+        background-color: $error-color-light !important;
+    }
+    &.dark {
+        background: $error-color-dark !important;
+        background-color: $error-color-dark !important;
+    }
+}
+
+.info-bg {
+    background: $info-color !important;
+    background-color: $info-color !important;
+    &.light {
+        background: $info-color-light !important;
+        background-color: $info-color-light !important;
+    }
+    &.dark {
+        background: $info-color-dark !important;
+        background-color: $info-color-dark !important;
+    }
+}
+
+.warning-bg {
+    background: $warning-color !important;
+    background-color: $warning-color !important;
+    &.light {
+        background: $warning-color-light !important;
+        background-color: $warning-color-light !important;
+    }
+    &.dark {
+        background: $warning-color-dark !important;
+        background-color: $warning-color-dark !important;
+    }
+}
+
+.waves-effect.waves-primary .waves-ripple {
+    background-color: $primary-wave;
+}
+
+.waves-effect.waves-secondary .waves-ripple {
+    background-color: $secondary-wave;
+}
+
+// THEME TEXT COLOR
+.primary-text {
+    color: $primary-color !important;
+    &.light {
+        color: $primary-color-light !important;
+    }
+    &.dark {
+        color: $primary-color-dark !important;
+    }
+}
+
+.secondary-text {
+    color: $secondary-color !important;
+    &.light {
+        color: $secondary-color-light !important;
+    }
+    &.dark {
+        color: $secondary-color-dark !important;
+    }
+}
+
+.success-text {
+    color: $success-color !important;
+}
+
+.error-text {
+    color: $error-color !important;
+}
+
+.info-text {
+    color: $info-color !important;
+}
+
+.warning-text {
+    color: $warning-color !important;
+}
+
+.alert-flash {
+    @extend .card-panel;
+    padding: 20px 15px !important;
+    color: #454f5a !important;
+    border-left: 5px solid #454f5a;
+    &.error {
+        border-color: $error-color;
+    }
+    &.success {
+        border-color: $success-color;
+    }
+    &.warning {
+        border-color: $warning-color;
+    }
+    &.info {
+        border-color: $info-color;
+    }
+    &.primary {
+        border-color: $primary-color;
+    }
+    &.secondary {
+        border-color: $secondary-color;
+    }
+    .close-flash{
+        position: absolute;
+        right:14px;
+        top:20px;
+    }
+}

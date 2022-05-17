@@ -1,0 +1,28 @@
+// Magnific-popup gallery ...
+.magnific-gallery {
+    overflow: hidden;
+    width: inherit;
+    margin: 0 auto;
+    text-align: center;
+    .magnific-gallary-item {
+        @extend .col,
+        .s12,
+        .m6,
+        .l4;
+        display: block;
+        float: left;
+        margin: 8px 0;
+        a {
+            width: 100%;
+            float: left;
+            display: block;
+            margin: 0;
+            img {
+                width: inherit;
+                margin: 0;
+            }
+        }
+    }
+}
+
+// Magnific-popup gallery Ends

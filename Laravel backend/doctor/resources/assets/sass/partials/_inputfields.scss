@@ -1,0 +1,159 @@
+//Input fields
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Input fields
+    - Informatic type / .informatic-input
+    - Password / .pass-gen
+    - Inline / .inline
+    - input[type=text]
+        - / .static-text
+        - / .rounded-input
+        - / .box-input
+        - / .valid
+        - / .invalid
+    - Material Tags / .materialize-tags
+------------------------------------------------------------------*/
+
+.input-field {
+    &.informatic-input {
+        margin-bottom: 8px;
+        input {
+            margin-bottom: $informatice-input-mb !important;
+        }
+        span.input-info {
+            width: calc(100% - 10px);
+            padding: 0;
+            line-height: 1.2rem;
+            font-size: 14px;
+            color: $informatice-input-span-textcolor;
+            -webkit-font-smoothing: antialiased;
+            &.full-block {
+                display: block;
+                float: left;
+                width: 100%;
+            }
+        }
+    }
+    &.pass-gen {
+        position: relative;
+        a.getNewPass {
+            position: absolute;
+            right: 14px;
+            top: 10px;
+        }
+        .waves-set {
+            @include setWave();
+        }
+    }
+    label {
+        color: $input-label-color;
+        font-weight: $input-label-font-weight;
+    }
+    &.inline {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        input,
+        .input-field.inline .select-dropdown {
+            margin-bottom: 1rem;
+        }
+    }
+    input[type=text] {
+        &.static-text {
+            border: none;
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+        }
+        &.rounded-input {
+            @extend .z-depth-1;
+            padding: 0 10px;
+            width: calc(100% - 20px);
+            @include border-radius(30px);
+            border: 1px solid $input-border-color;
+            margin-top: 5px;
+            box-shadow: none !important;
+            &:focus {
+                border-color: $input-border-hover-color;
+                box-shadow: none !important;
+            }
+        }
+        &.box-input {
+            @extend .z-depth-1;
+            padding: 0 10px;
+            width: calc(100% - 20px);
+            border: 1px solid $input-border-color;
+            margin-top: 5px;
+            box-shadow: none !important;
+            &:focus {
+                border-color: $input-border-hover-color;
+                box-shadow: none !important;
+            }
+        }
+        &:focus {
+            border-bottom: 1px solid $input-border-focus-color;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: 0 1px 0 0 $input-border-focus-color;
+            +label {
+                color: $input-border-focus-color;
+            }
+        }
+        &.valid {
+            border-bottom: 1px solid $input-valid-color;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: 0 1px 0 0 $input-valid-color;
+        }
+        &.invalid {
+            border-bottom: 1px solid $input-invalid-color;
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: 0 1px 0 0 $input-invalid-color;
+        }
+        &.border-blue {
+            border-color: #64b5f6;
+        }
+        &.border-red {
+            border-color: #e53935;
+        }
+        &.border-yellow {
+            border-color: yellow;
+        }
+        &.border-green {
+            border-color: green;
+        }
+        &.border-cyan {
+            border-color: #00bcd4;
+        }
+        &.border-teal {
+            border-color: #009688;
+        }
+        &.border-amber {
+            border-color: #ffc107;
+        }
+        &.border-orange {
+            border-color: #ff9800;
+        }
+    }
+    .prefix.active {
+        color: $prefix-active;
+    }
+    .materialize-tags {
+        padding-top: 10px;
+        input[type=text] {
+            border-bottom: 0;
+        }
+        span.twitter-typeahead {
+            display: inline-block !important;
+        }
+        .chip {
+            i.material-icons {
+                cursor: pointer;
+                float: right;
+                font-size: 16px;
+                line-height: 32px;
+                padding-left: 8px;
+            }
+        }
+    }
+}

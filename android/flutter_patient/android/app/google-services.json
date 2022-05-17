@@ -1,0 +1,179 @@
+{
+  "project_info": {
+    "project_number": "562311373665",
+    "firebase_url": "https://myconsultant-patientapp.firebaseio.com",
+    "project_id": "myconsultant-patientapp",
+    "storage_bucket": "myconsultant-patientapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562311373665:android:ed63b8f01533422a0edb20",
+        "android_client_info": {
+          "package_name": "com.doctoreedapp6156"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562311373665-auautlssp6ltsu5qt9um0esleq11kl2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doctoreedapp6156",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCvlxBWMNYaG-1tKwdraDDGIkSXqFA4UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "562311373665-1fg23bjpmvu2o7b8qlrgvm5b5qte32m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "myconsultant-patientapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562311373665:android:0d39088c14d18df30edb20",
+        "android_client_info": {
+          "package_name": "com.iraqdoctorconsultant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCvlxBWMNYaG-1tKwdraDDGIkSXqFA4UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "562311373665-1fg23bjpmvu2o7b8qlrgvm5b5qte32m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "myconsultant-patientapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562311373665:android:b85f1de1da9598e60edb20",
+        "android_client_info": {
+          "package_name": "com.iraqpatientsconsultant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCvlxBWMNYaG-1tKwdraDDGIkSXqFA4UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "562311373665-1fg23bjpmvu2o7b8qlrgvm5b5qte32m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "myconsultant-patientapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562311373665:android:b8d6d352956a246e0edb20",
+        "android_client_info": {
+          "package_name": "com.patienteedapp615"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562311373665-5od2lijn7of30dj8ailv7lhnbufcttef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.patienteedapp615",
+            "certificate_hash": "b1024a792cc2e5d8b7180eafe16a0b9b8149ad84"
+          }
+        },
+        {
+          "client_id": "562311373665-r021tig15gfe7avo5fs1c7h2i67355p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.patienteedapp615",
+            "certificate_hash": "7fe4368969ddc15a093a6293c8a92c664b7771dc"
+          }
+        },
+        {
+          "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCvlxBWMNYaG-1tKwdraDDGIkSXqFA4UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562311373665-0cb9p9a7r087l79c9fbombml3fd7aask.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "562311373665-1fg23bjpmvu2o7b8qlrgvm5b5qte32m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "myconsultant-patientapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

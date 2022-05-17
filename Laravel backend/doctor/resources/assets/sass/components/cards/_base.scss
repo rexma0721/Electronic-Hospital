@@ -1,0 +1,370 @@
+/*------------------------------------------------------------------
+[main.scss Table of contents]
+
+1.  Base Card / .card, .card-action
+2.  Card Dash (Another type if card)
+    + Base / .card-dash
+        -  title / .title
+        -  card image / .card-image
+            - Image / img
+            -  Card Title / .card-title
+        - category / .category
+        - card-content / .card-content
+        - Card Header / .card-header
+            - title
+            - category
+            - card-chart
+        - Chart / .chart-title
+        - Card Footer / .card-footer
+        - Card  category-social  / .category-social
+        - Card .author  / .author
+3.  State / .card-stats
+        - title
+        - card-header
+        - card-content
+        - dash-blog-content
+4. Plain
+    + Plain card / .card-plain
+        - card-header
+        - content
+        - card-image
+5. Card-profile & Card-testimonial // .card-profile,.card-testimonial
+6. Statistic Card
+    + Base / .card-statistics
+        - p
+        - button
+7. Card Action / .card-action
+-------------------------------------------------------------------*/
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: $primary-color;
+    &:hover {
+        color: $primary-color-light;
+    }
+}
+
+.card-dash {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-top: 20px !important;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: $border-radius-base;
+    color: $dash-card-body-text;
+    background: $dash-card-body-background;
+    .card-height-indicator {
+        margin-top: 100%;
+    }
+    .title {
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: #000;
+    }
+    .card-image {
+        height: 60%;
+        position: relative;
+        overflow: hidden;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: -30px;
+        border-radius: $border-radius-large;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius-large;
+            pointer-events: none;
+        }
+        .card-title {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: $dash-card-image-headline;
+            font-size: $font-size-h4;
+            text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+        }
+    }
+    .category:not([class*="text-"]) {
+        color: #000;
+    }
+    .card-content {
+        padding: 15px 20px;
+        .category {
+            margin-bottom: 0;
+        }
+    }
+    .card-header {
+        margin: -20px $margin-base 0;
+        border-radius: $border-radius-base;
+        padding: $padding-base;
+        background-color: color('grey', 'base');
+        .title {
+            color: #FFF;
+        }
+        .category {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, .62);
+        }
+        &.card-chart {
+            padding: 0;
+            min-height: 160px !important;
+            +.content {
+                h4 {
+                    margin-top: 0;
+                }
+            }
+        }
+        .ct-label {
+            color: rgba(255, 255, 255, .7);
+        }
+        .ct-grid {
+            stroke: rgba(255, 255, 255, 0.2);
+        }
+        .ct-series-a .ct-point,
+        .ct-series-a .ct-line,
+        .ct-series-a .ct-bar,
+        .ct-series-a .ct-slice-donut {
+            stroke: rgba(255, 255, 255, .8);
+        }
+        .ct-series-a .ct-slice-pie,
+        .ct-series-a .ct-area {
+            fill: rgba(255, 255, 255, .4);
+        }
+    }
+    .chart-title {
+        position: absolute;
+        ;
+        top: 25px;
+        width: 100%;
+        text-align: center;
+        h3 {
+            margin: 0;
+            color: #FFF;
+        }
+        h6 {
+            margin: 0;
+            color: rgba(255, 255, 255, .4);
+        }
+    }
+    .card-footer {
+        margin: 0 20px 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eeeeee;
+        .content {
+            display: block;
+        }
+        div {
+            display: inline-block;
+        }
+        .author {
+            color: color('grey', 'base');
+        }
+        .stats {
+            line-height: 22px;
+            color: color('grey', 'base');
+            font-size: $font-size-small;
+            .material-icons {
+                position: relative;
+                top: 4px;
+                font-size: $font-paragraph;
+            }
+            .mdi {
+                font-size: calc(#{$font-paragraph} - 1px);
+            }
+        }
+        h6 {
+            color: color('grey', 'base');
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .category {
+        .material-icons {
+            position: relative;
+            top: 6px;
+            line-height: 0;
+        }
+    }
+    .category-social {
+        .fa {
+            font-size: 24px;
+            position: relative;
+            margin-top: -4px;
+            top: 2px;
+            margin-right: 5px;
+        }
+    }
+    .author {
+        .avatar {
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            .ripple-container {
+                display: none;
+            }
+        }
+    }
+    .table {
+        margin-bottom: 0;
+        tr:first-child td {
+            border-top: none;
+        }
+    }
+}
+
+.card-stats {
+    .title {
+        margin: 0;
+    }
+    .card-header {
+        float: left;
+        text-align: center;
+        i {
+            font-size: 36px;
+            line-height: 56px;
+            width: 56px;
+            height: 56px;
+            &.mdi {
+                display: block;
+            }
+        }
+    }
+    .card-content {
+        text-align: right;
+        padding-top: 10px;
+    }
+    .dash-blog-content {
+        display: block;
+        float: left;
+        width: inherit;
+        text-align: left;
+    }
+}
+
+.card-plain {
+    background: transparent;
+    box-shadow: none;
+    .card-header {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .content {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .card-image {
+        margin: 0;
+        border-radius: $border-radius-base;
+        img {
+            border-radius: $border-radius-base;
+        }
+    }
+}
+
+.iframe-container {
+    margin: 0 -20px 0;
+    iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+    }
+}
+
+.card-profile,
+.card-testimonial {
+    margin-top: 30px;
+    text-align: center;
+    .btn-just-icon.btn-raised {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .card-avatar {
+        max-width: 130px;
+        max-height: 130px;
+        margin: -50px auto 0;
+        border-radius: 50%;
+        overflow: hidden;
+        &+.content {
+            margin-top: 15px;
+        }
+    }
+    &.card-plain {
+        .card-avatar {
+            margin-top: 0;
+        }
+    }
+}
+
+.card-statistics {
+    .with-top-text {
+        margin-top: 4px;
+    }
+    p {
+        &.statistic-set {
+            height: $usr-widget-type2-internal-actionBtm-height;
+            line-height: $usr-widget-type2-internal-actionBtm-height;
+            span {
+                &.statistic-title {
+                    display: block;
+                    line-height: $usr-widget-type2-internal-actionBtm-height * 0.60;
+                }
+                &.counter {
+                    display: block;
+                    line-height: $usr-widget-type2-internal-actionBtm-height * 0.20;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    button {
+        text-align: center;
+        position: relative;
+        span {
+            &.statistic-title {
+                text-transform: capitalize !important;
+            }
+            &.counter {
+                position: absolute;
+                font-size: 10px;
+                height: 14px;
+                line-height: 14px;
+                padding: 2px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.card-action {
+    .block-way-item {
+        display: block;
+        float: left;
+        // padding: 0 10px 25px 10px;
+        .title {
+            display: block;
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+        .category {
+            display: block;
+            text-align: center;
+            margin-bottom: 0;
+            font-size: 13px;
+            color: color('grey', 'darken-1');
+        }
+    }
+}
+
+@media #{$medium-and-up} {
+    .auth-dash-card {
+        margin-top: 100px;
+    }
+}

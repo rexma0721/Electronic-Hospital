@@ -1,0 +1,143 @@
+// Base .. Defining based on Theme Style
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. html
+2. Body
+	+ signin
+	+ error-page
+------------------------------------------------------------------*/
+
+html {
+    width: 100%;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: $body-color;
+        // display: none;
+        &.signin {
+            position: relative;
+            background-image: $signin-bg-path;
+            z-index: -1;
+            .signin-wrapper,
+            .signup-wrapper {
+                width: 480px;
+                overflow: auto;
+                margin: auto;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(33, 33, 33, 0.60);
+                input[type='email'],
+                input[type='password'] {
+                    // color: $auth-text-color !important;
+                }
+                .signin-form,
+                .signup-form {
+                    margin-top: 50px;
+                    i {
+                        color: #9e9e9e;
+                        &.active {
+                            color: $secondary-color;
+                        }
+                    }
+                    label {
+                        &.forgot-password {
+                            width: calc(100% - 22px);
+                            text-align: right !important;
+                        }
+                        a {
+                            text-decoration: underline;
+                            ;
+                        }
+                    }
+                    .sigin-submit {
+                        @include border-radius(30px);
+                    }
+                }
+                .signup-profile {
+                    margin-top: 10px;
+                    height: 140px;
+                    .profile-pic {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        @include border-radius(10px);
+                        position: relative;
+                        background: rgba(66, 66, 66, 0.60);
+                        ;
+                        img {
+                            position: absolute;
+                            height: inherit;
+                            width: inherit;
+                            border: none;
+                            @include border-radius(10px);
+                            z-index: 2;
+                        }
+                        input[type='file'] {
+                            position: absolute;
+                            border: none;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                            z-index: 9;
+                            cursor: pointer;
+                        }
+                        a.btn-floating {
+                            z-index: 1;
+                            position: absolute;
+                            margin: auto;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                }
+                .nav-link {
+                    margin-top: 20px;
+                    a {
+                        color: lighten(teal, 2);
+                    }
+                }
+            }
+            .logo-section {
+                width: 75px;
+                height: 75px;
+                text-align: center;
+                overflow: auto;
+                margin: auto;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 40px;
+                background: rgba(38, 166, 154, 0.90);
+                img {
+                    margin: auto;
+                    height: 50px;
+                }
+                z-index: 2;
+            }
+        }
+        &.error-page {
+            position: relative;
+            background: #424242;
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+        .logofonts {
+            font-family: "anuratiregular";
+        }
+    }
+}

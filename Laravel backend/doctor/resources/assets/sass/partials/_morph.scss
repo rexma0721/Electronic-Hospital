@@ -1,0 +1,241 @@
+.morph.small {
+    font-size: $morph-small;
+}
+
+.morph.medium {
+    font-size: $morph-medium;
+}
+
+.morph.large {
+    font-size: $morph-large;
+}
+
+.morph {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    // background-color: $morph-default-bg;
+    color: $morph-default-color;
+    box-shadow: none;
+    border-radius: 2em;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    &:active {
+        transform: scale(1.1, 1.1);
+    }
+    >span {
+        display: block;
+        position: relative;
+        width: 2em;
+        height: 2em;
+        transition: transform 0.5s ease;
+        overflow: hidden;
+        margin: 1em;
+        >span {
+            display: block;
+            background-color: $morph-default-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2em;
+            height: 2em;
+            transition: all 0.5s ease;
+        }
+    }
+    &.play>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(1em, 0) scale(1.6, 1);
+        >span {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: rotate(-45deg) translate(-1em, -1em) scale(1, 1);
+        }
+    }
+    &.pause>span>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(0.4, 1) translate(-1.6em, 0);
+        &.s3 {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(0.4, 1) translate(1.6em, 0);
+        }
+    }
+    &.stop>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(0.8, 0.8);
+    }
+    &.menu>span>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1, 0.2) translate(0, -3em);
+        &.s2 {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(1, 0.2) translate(0, 0);
+        }
+        &.s3 {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(1, 0.2) translate(0, 3em);
+        }
+    }
+    &.close>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        >span {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(1, 0.2);
+            &.s3 {
+                //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                transform: scale(0.2, 1);
+            }
+        }
+    }
+    &.plus>span>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1, 0.2);
+        &.s3 {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(0.2, 1);
+        }
+    }
+    &.minus>span>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1, 0.2);
+    }
+    &.more>span>span {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(0.2, 0.2) translate(-3em, 0);
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 2em;
+        &.s2 {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(0.2, 0.2) translate(0, 0);
+        }
+        &.s3 {
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(0.2, 0.2) translate(3em, 0);
+        }
+    }
+    &.topArrow>span>span {
+        width: 0.4em;
+        height: 1.8em;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0.8em, 0.2em);
+        &.s2 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 0 0;
+            height: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(1em, 0) rotate(45deg);
+        }
+        &.s3 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 100% 0;
+            height: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0.6em, 0) rotate(-45deg);
+        }
+    }
+    &.bottomArrow>span>span {
+        width: 0.4em;
+        height: 1.8em;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0.8em, 0);
+        &.s2 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 100% 100%;
+            height: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0.6em, 0.6em) rotate(45deg);
+        }
+        &.s3 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 0 100%;
+            height: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(1em, 0.6em) rotate(-45deg);
+        }
+    }
+    &.notify>span>span {
+        transform: scale(1, 0.2) translate(0, -3em);
+        &.s2 {
+            transform: scale(0.9, 0.2) translate(-0.2em, 0);
+        }
+        &.s3 {
+            transform: scale(1, 0.2) translate(0, 3em);
+        }
+    }
+    &.rightArrow>span>span {
+        width: 1.8em;
+        height: 0.4em;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0, 0.8em);
+        &.s2 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 100% 0;
+            width: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0.6em, 1em) rotate(45deg);
+        }
+        &.s3 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 100% 100%;
+            width: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0.6em, 0.6em) rotate(-45deg);
+        }
+    }
+    &.leftArrow>span>span {
+        width: 1.8em;
+        height: 0.4em;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(0.2em, 0.8em);
+        &.s2 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 0 100%;
+            width: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0, 0.6em) rotate(45deg);
+        }
+        &.s3 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 0 0;
+            width: 1.4em;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0, 1em) rotate(-45deg);
+        }
+    }
+    &.checked>span>span {
+        width: 1em;
+        height: 0.4em;
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 100% 100%;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(-0.3em, 1.4em) rotate(45deg);
+        &.s3 {
+            width: 1.8em;
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 0 100%;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translate(0.7em, 1.4em) rotate(-45deg);
+        }
+    }
+    &.heart>span>span {
+        width: 1em;
+        height: 1.7em;
+        top: 0.2em;
+        left: 1em;
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 0 100%;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 1em 1em 0 0;
+        &.s3 {
+            //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+            transform-origin: 100% 100%;
+            left: 0;
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: rotate(45deg);
+        }
+    }
+}

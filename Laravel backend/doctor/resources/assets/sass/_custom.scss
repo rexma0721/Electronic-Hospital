@@ -1,0 +1,56 @@
+$admin-profile-box-size:200px;
+$admin-edit-profile-bc:#424242;
+
+.img-input{
+    position: relative;
+    height: $admin-profile-box-size;
+    width: $admin-profile-box-size;
+    p{
+        margin-top: 0;
+    }
+    img{
+        position: absolute;
+        width: $admin-profile-box-size !important;
+        height: auto;
+        display:block;
+        z-index: 0;
+        border:1px solid $admin-edit-profile-bc;
+    }
+    input[type='file']{
+        position: absolute;
+        width: $admin-profile-box-size;
+        height: $admin-profile-box-size;
+        opacity: 0;
+        z-index: 2;
+    }
+}
+
+.Alert{
+    position: relative !important;
+}
+.Alert__close{
+    position: absolute;
+    top:20px;
+    right: 1em;
+    font-weight: bold;
+    cursor:pointer;
+}
+    
+.forge-select{
+    ul{
+        max-height: 300px !important;
+    }
+}
+table{
+    thead, tbody{
+        .multiple-cb{
+            width: 20px;
+            height: 20px;
+            p{
+                height: inherit;
+                width: inherit;
+                line-height: 20px;
+            }
+        }
+    }
+}

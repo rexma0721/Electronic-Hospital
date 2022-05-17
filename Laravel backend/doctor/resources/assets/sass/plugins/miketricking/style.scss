@@ -1,0 +1,1215 @@
+//colors
+$white: #fff;
+$color_gallery_approx: #eee;
+$black: #000;
+$white_20: rgba(255,255,255,.2);
+$black_60: rgba(0,0,0,.6);
+$black_50: rgba(0,0,0,.5);
+$color_gravel_70_approx: rgba(75,75,75,.7);
+$color_keppel_40_approx: rgba(48,152,157,.4);
+$color_silver_chalice_40_approx: rgba(170,170,170,.4);
+$black_40: rgba(0,0,0,.4);
+$black_20: rgba(0,0,0,.2);
+$white_70: rgba(255,255,255,.7);
+$color_aquamarine_approx: #79fac4;
+$color_limed_spruce_approx: #3c4a50;
+$color_shark_approx: #252d31;
+$color_lavender_magenta_approx: #ff89e9;
+$color_cerulean_approx: #05abe0;
+$color_ocean_green_approx: #42b078;
+$black_30: rgba(0,0,0,.3);
+
+//fonts
+$font_0: Roboto;
+$font_1: sans-serif;
+
+//urls
+$url_0: url(../images/back3.jpg);
+
+//@extend-elements
+//original selectors
+//.hover, .hover .overlay
+%extend_1 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+//original selectors
+//.ehover4 button.info, .ehover42 button.info
+%extend_2 {
+	margin: -55px 0 0;
+	padding: 73px 90px;
+	font-weight: 400;
+	border: 1px solid $white;
+}
+
+//original selectors
+//.ehover3 button.info, .ehover3 h2
+%extend_3 {
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: scale(.7);
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all .4s ease-in;
+	opacity: 0;
+}
+
+//original selectors
+//.ehover6 h2, .ehover6 hr
+%extend_4 {
+	top: 50%;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity .35s,transform .35s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(-50%,-50%,0);
+	//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+	transform-origin: 50%;
+}
+
+//original selectors
+//.group1, .group2
+%extend_5 {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity .35s,transform .35s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(-50%,-50%,0);
+	//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+	transform-origin: 50%;
+	padding: 0;
+	letter-spacing: 0;
+}
+
+//original selectors
+//.ehover7 p, .ehover8 p
+%extend_6 {
+	text-transform: none;
+	font-size: 15px;
+	line-height: 2;
+}
+
+//original selectors
+//.ehover7 h2, .ehover7 p
+%extend_7 {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity .35s,transform .35s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(-50%,-50%,0);
+	//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+	transform-origin: 50%;
+	padding: 0;
+}
+
+//original selectors
+//.ehover8 h2, .ehover8 hr, .set1, .set2
+%extend_8 {
+	left: 50%;
+	background-color: transparent;
+	position: absolute;
+	margin: 0;
+}
+
+//original selectors
+//.ehover8 h2, .ehover8 hr
+%extend_9 {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity .35s,transform .35s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(-50%,-50%,0);
+	//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+	transform-origin: 50%;
+}
+
+//original selectors
+//.set1, .set2
+%extend_10 {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: opacity .35s,transform .35s;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: translate3d(-50%,-50%,0);
+	//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+	transform-origin: 50%;
+	padding: 0;
+}
+
+//original selectors
+//.ehover13 button, .ehover13 h2
+%extend_11 {
+	opacity: 0;
+	color: $white;
+	padding: 1em 0;
+}
+
+
+.hover {
+	text-align: center;
+	@extend %extend_1;
+	// float: left;
+	position: relative;
+	cursor: default;
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		position: relative;
+		font-size: 17px;
+		padding: 10px;
+		background: $black_60;
+	}
+	.overlay {
+		@extend %extend_1;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	button {
+		&.info {
+			text-transform: uppercase;
+			color: $white;
+			display: inline-block;
+			text-decoration: none;
+			padding: 7px 14px;
+			border: 1px solid $white;
+			margin: 50px 0 0;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+			background-color: transparent;
+			&:hover {
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: 0 0 5px $white;
+			}
+		}
+		&.nullbutton {
+			border: none;
+			padding: 0;
+			margin: 0;
+			&:hover {
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: none;
+			}
+		}
+	}
+	img {
+		display: block;
+		position: relative;
+	}
+}
+.ehover11 {
+	background: linear-gradient(45deg,$color_lavender_magenta_approx 0,$color_cerulean_approx 100%);
+	.overlay::before {
+		content: '';
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		bottom: 20px;
+		left: 20px;
+		border: 1px solid $white;
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .45s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-20px,0,0);
+	}
+	img {
+		max-width: calc(100% + 60px) !important;
+		width: calc(100% +60px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .45s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-40px,0,0);
+	}
+	.overlay {
+		padding: 3em;
+		text-align: left;
+	}
+	h2 {
+		background-color: transparent;
+		padding: 15% 0 10px;
+		text-align: left;
+	}
+	&:hover {
+		img {
+			opacity: .6;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		.overlay::before {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+	}
+	button.info {
+		color: $white;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		border: none;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .45s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-10px,0,0);
+	}
+}
+.ehover12 {
+	background: $color_ocean_green_approx;
+	h2::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: $white;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-100%,0,0);
+	}
+	img {
+		max-width: calc(100% + 20px) !important;
+		width: calc(100% +20px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-10px,0,0);
+		//Instead of the line below you could use @include backface-visibility($visibility)
+		backface-visibility: hidden;
+	}
+	&:hover {
+		img {
+			opacity: .4;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		h2::after {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		button {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+	}
+	.overlay {
+		padding: 50px 20px;
+	}
+	h2 {
+		position: relative;
+		overflow: hidden;
+		padding: .5em 0;
+		background-color: transparent;
+	}
+	button {
+		color: $white;
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(100%,0,0);
+	}
+}
+.ehover7 {
+	.overlay::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 40%;
+		height: 60%;
+		border: 2px solid $white;
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+		//Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+		transform-origin: 50%;
+	}
+	h2 {
+		background-color: transparent;
+		margin: 0;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@extend %extend_7;
+	}
+	p {
+		background-color: transparent;
+		margin: 0;
+		@extend %extend_6;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@extend %extend_7;
+		width: 20%;
+		a {
+			color: $white;
+			display: inline-block;
+		    width: 50%;
+		    text-align: center;
+		    font-size: 18px;
+			&:focus {
+				opacity: .6;
+			}
+			&:hover {
+				opacity: .6;
+			}
+			&:first-child i {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-60px,-60px,0);
+			}
+			&:nth-child(2) i {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(60px,-60px,0);
+			}
+			&:nth-child(3) i {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-60px,60px,0);
+			}
+			&:nth-child(4) i {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(60px,60px,0);
+			}
+		}
+	}
+	&:hover {
+		.overlay::before {
+			opacity: 1;
+			background-color: $black_20;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-135deg) scale3d(1,1,1);
+		}
+		h2 {
+			opacity: 0;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) scale3d(.8,.8,1);
+		}
+		p i:empty {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+			opacity: 1;
+		}
+	}
+	a i {
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		padding: 0 5px;
+	}
+}
+.titlep {
+	letter-spacing: 0;
+	padding-bottom: 60px;
+	font-size: 18px;
+}
+.breath {
+	padding-top: 80px;
+}
+.topinfo {
+	position: absolute;
+	bottom: 1px;
+	left: 96px;
+}
+.page-header {
+	display: inline-block;
+	margin: 40px 0 20px;
+	border: 1px solid $color_gallery_approx;
+	padding: 15px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 12px;
+}
+
+.navbar-inverse {
+	color: $white;
+	background-color: $white_20;
+	border-bottom: 1px solid $white;
+	.navbar-brand {
+		color: $white;
+	}
+	.navbar-nav > li > a {
+		color: $white;
+	}
+}
+
+.ehover10 {
+	button {
+		display: inline-block;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0,200%,0);
+		&.info {
+			float: left;
+			margin: 0;
+			text-transform: uppercase;
+			color: $white;
+			font-size: 17px;
+			background: $black_60;
+		}
+	}
+	.overlay {
+		top: auto;
+		bottom: 0;
+		padding: 1em;
+		height: 4.75em;
+		background: $color_aquamarine_approx;
+		color: $color_limed_spruce_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0,100%,0);
+	}
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: transform .35s;
+	}
+	&:hover {
+		img {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,-10%,0);
+		}
+		.overlay {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		button {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		h2 {
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .05s;
+		}
+		p.icon-links a {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+			&:focus {
+				color: $color_shark_approx;
+			}
+			&:hover {
+				color: $color_shark_approx;
+			}
+			&:nth-child(3) {
+				//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+				transition-delay: .1s;
+			}
+			&:nth-child(2) {
+				//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+				transition-delay: .15s;
+			}
+			&:first-child {
+				//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+				transition-delay: .2s;
+			}
+		}
+	}
+	p.icon-links a {
+		float: right;
+		color: $color_limed_spruce_approx;
+		font-size: 1.4em;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0,200%,0);
+		span::before {
+			display: inline-block;
+			padding: 8px 10px;
+			speak: none;
+		}
+	}
+}
+.ehover5 {
+	h2 {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+	}
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.1);
+	}
+	&:hover {
+		img {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+		}
+		.overlay {
+			background-color: $color_silver_chalice_40_approx;
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+			background-color: $black_40;
+		}
+	}
+	.overlay {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+	}
+	button.info {
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.5);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+		font-weight: 400;
+		border: 1px solid $white;
+		height: 85%;
+		width: 85%;
+		position: absolute;
+		top: -20%;
+		left: 8%;
+		padding: 70px;
+		&:hover {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+}
+.ehover4 {
+	.overlay {
+		background-color: $color_gravel_70_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+	}
+	h2 {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(55px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+	}
+	&:hover {
+		h2 {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(15px);
+		}
+		.overlay {
+			background-color: $color_keppel_40_approx;
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+		}
+	}
+	button.info {
+		@extend %extend_2;
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+	}
+}
+.ehover42 {
+	.overlay {
+		background-color: $color_gravel_70_approx;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s cubic-bezier(.88,-.99,0,1.81);
+	}
+	h2 {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(55px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s cubic-bezier(.88,-.99,0,1.81);
+	}
+	&:hover {
+		h2 {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(15px);
+		}
+		.overlay {
+			background-color: $color_keppel_40_approx;
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+		}
+	}
+	button.info {
+		@extend %extend_2;
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s cubic-bezier(.88,-.99,0,1.81);
+	}
+}
+.point {
+	cursor: pointer;
+}
+.ehover1 {
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s linear;
+	}
+	.overlay {
+		opacity: 0;
+		background-color: $black_50;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in-out;
+	}
+	h2 {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translatey(-100px);
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-in-out;
+	}
+	&:hover {
+		img {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1.2);
+		}
+		.overlay {
+			opacity: 1;
+		}
+		h2 {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translatey(0);
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translatey(0);
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .2s;
+		}
+	}
+	button.info {
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-in-out;
+	}
+}
+.ehover2 {
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-in;
+	}
+	.overlay {
+		background-color: $black_60;
+		opacity: 0;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate(460px,-100px) rotate(180deg);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s .4s ease-in-out;
+	}
+	&:hover {
+		.overlay {
+			opacity: 1;
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: 0s;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate(0,0);
+		}
+		h2 {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(0);
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .5s;
+		}
+		button.info {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(0);
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .3s;
+		}
+	}
+	button.info {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-200px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-in-out;
+	}
+}
+.ehover9 {
+	h2 {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-200px);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all ease-in-out .1s;
+		//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+		transition-delay: .3s;
+	}
+	&:hover {
+		h2 {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(0);
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .3s;
+		}
+		.overlay {
+			opacity: 1;
+			top: 0;
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: 0s;
+		}
+		button.info {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translateY(0);
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 0 5px $black;
+			color: $black;
+			border: 1px solid $black;
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .3s;
+		}
+	}
+	.overlay {
+		background-color: $white_70;
+		top: -200px;
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .1s ease-out .5s;
+	}
+	button.info {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateY(-200px);
+		color: $black;
+		border: 1px solid $black;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all ease-in-out .3s;
+	}
+}
+.ehover3 {
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s ease-in;
+	}
+	h2 {
+		@extend %extend_3;
+	}
+	&:hover {
+		img {
+			filter: grayscale(1) blur(3px);
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1.2);
+		}
+		h2 {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+		}
+	}
+	button.info {
+		@extend %extend_3;
+	}
+}
+.ehover1v2 {
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s cubic-bezier(.88,-.99,0,1.81);
+	}
+	.overlay {
+		opacity: 0;
+		background-color: $black_50;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .4s cubic-bezier(.88,-.99,0,1.81);
+	}
+	h2 {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translatey(-100px);
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s cubic-bezier(.88,-.99,0,1.81);
+	}
+	&:hover {
+		img {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1.2);
+		}
+		.overlay {
+			opacity: 1;
+		}
+		h2 {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translatey(0);
+		}
+		button.info {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translatey(0);
+			//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+			transition-delay: .2s;
+		}
+	}
+	button.info {
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .2s ease-in-out;
+	}
+}
+.ehover6 {
+	h2 {
+		left: 50%;
+		position: absolute;
+		background-color: transparent;
+		margin: 0;
+		@extend %extend_4;
+		width: 100%;
+	}
+	hr {
+		left: 50%;
+		position: absolute;
+		background-color: transparent;
+		margin: 0;
+		width: 50%;
+		opacity: 0;
+		@extend %extend_4;
+		&:nth-child(2) {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) rotate(0) scale3d(0,0,1);
+		}
+		&:nth-child(3) {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(0,0,1);
+		}
+	}
+	.rotate {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(-45deg);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	p {
+		width: 30%;
+		text-transform: none;
+		font-size: 15px;
+		line-height: 2;
+		a {
+			color: $white;
+			display: inline-block;
+			width: 40%;
+			height: 40%;
+			&:focus {
+				opacity: .6;
+			}
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+	&:hover {
+		h2 {
+			opacity: 0;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) scale3d(.8,.8,1);
+		}
+		hr {
+			&:nth-child(2) {
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-50%,-50%,0) rotate(0) scale3d(1,1,1);
+			}
+			&:nth-child(3) {
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-50%,-50%,0) rotate(90deg) scale3d(1,1,1);
+			}
+		}
+		img {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+			filter: brightness(.7);
+		}
+		.group1 i:empty {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0) rotate(45deg) scale(1);
+			opacity: 1;
+		}
+		.group2 i:empty {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0) rotate(45deg) scale(1);
+			opacity: 1;
+		}
+	}
+	img {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.1);
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .35s;
+	}
+	a i {
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		padding: 10px;
+		font-size: 20px;
+	}
+}
+.group1 {
+	left: 50%;
+	position: absolute;
+	background-color: transparent;
+	margin: 0;
+	@extend %extend_5;
+	top: 40%;
+	a {
+		&:first-child i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-60px,-60px,0) rotate(45deg) scale(2);
+		}
+		&:nth-child(2) i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(60px,-60px,0) rotate(45deg) scale(2);
+		}
+	}
+}
+.group2 {
+	left: 50%;
+	position: absolute;
+	background-color: transparent;
+	margin: 0;
+	@extend %extend_5;
+	top: 60%;
+	a {
+		&:first-child i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-60px,60px,0) rotate(45deg) scale(2);
+		}
+		&:nth-child(2) i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(60px,60px,0) rotate(45deg) scale(2);
+		}
+	}
+}
+.ehover8 {
+	p {
+		@extend %extend_6;
+		width: 30%;
+		a {
+			color: $white;
+			display: inline-block;
+			width: 50%;
+			height: 50%;
+			&:focus {
+				opacity: .6;
+			}
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+	h2 {
+		top: 50%;
+		@extend %extend_8;
+		@extend %extend_9;
+	}
+	hr {
+		top: 50%;
+		@extend %extend_8;
+		width: 40%;
+		opacity: 0;
+		border: 1px solid $white;
+		@extend %extend_9;
+		&:nth-child(3) {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,90deg) scale3d(0,0,1);
+		}
+		&:nth-child(4) {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,180deg) scale3d(0,0,1);
+		}
+	}
+	&:hover {
+		h2 {
+			opacity: 0;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-50%,-50%,0) scale3d(.8,.8,1);
+		}
+		hr {
+			&:nth-child(3) {
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-90deg) scale3d(1,1,1);
+			}
+			&:nth-child(4) {
+				opacity: 1;
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-180deg) scale3d(1,1,1);
+			}
+		}
+		.set1 i:empty {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+			opacity: 1;
+		}
+		.set2 i:empty {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+			opacity: 1;
+		}
+	}
+	a i {
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		padding: 10px;
+		font-size: 20px;
+	}
+}
+.set1 {
+	@extend %extend_8;
+	@extend %extend_10;
+	top: 40%;
+	a {
+		&:first-child i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-60px,-60px,0);
+		}
+		&:nth-child(2) i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(60px,-60px,0);
+		}
+	}
+}
+.set2 {
+	@extend %extend_8;
+	@extend %extend_10;
+	top: 60%;
+	a {
+		&:first-child i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(-60px,60px,0);
+		}
+		&:nth-child(2) i {
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(60px,60px,0);
+		}
+	}
+}
+.ehover13 {
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .35s;
+	}
+	.overlay {
+		width: 80%;
+		height: 80%;
+		left: 10%;
+		top: 10%;
+		border-bottom: 1px solid $white;
+		border-top: 1px solid $white;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0,1);
+	}
+	button {
+		@extend %extend_11;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0,100%,0);
+	}
+	&:hover {
+		img {
+			filter: brightness(.6);
+		}
+		.overlay {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: scale(1);
+		}
+		button {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		h2 {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+	}
+	h2 {
+		@extend %extend_11;
+		background-color: transparent;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(0,-100%,0);
+	}
+}
+.ehover14 {
+	img {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .35s;
+	}
+	.overlay {
+		opacity: 0;
+		width: 55%;
+		height: 81%;
+		left: 22%;
+		top: 10%;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 80%;
+		border: 2px solid $white;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(50%,50%,0);
+	}
+	button {
+		opacity: 0;
+		color: $white;
+		padding: 1em 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-150%,-400%,0);
+	}
+	&:hover {
+		img {
+			filter: brightness(1.4);
+		}
+		.overlay {
+			background-color: $black_30;
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		button {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+		h2 {
+			opacity: 1;
+			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+			transform: translate3d(0,0,0);
+		}
+	}
+	h2 {
+		background-color: transparent;
+		color: $white;
+		padding: 1em 0;
+		opacity: 0;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: opacity .35s,transform .35s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translate3d(-150%,-400%,0);
+	}
+}
+button:focus {
+	outline: 0!important;
+}

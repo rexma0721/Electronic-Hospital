@@ -1,0 +1,191 @@
+//colors
+$black: #000;
+$white: #fff;
+$color_silver_chalice_approx: #aaa;
+$gray: #808080;
+$steel_blue: steelblue;
+$color_quill_gray_approx: lightgray;
+$color_tapa_approx: #777777;
+$color_celeste_approx: #ccc;
+$color_mountain_mist_approx: #999;
+$color_bon_jour_approx: #e0e0e0;
+
+//fonts
+$font_0: sans-serif;
+
+.c3 {
+	svg {
+		font: 10px $font_0;
+	}
+	path {
+		fill: none;
+		stroke: $black;
+	}
+	line {
+		fill: none;
+		stroke: $black;
+	}
+	text {
+		//Instead of the line below you could use @include user-select($select)
+		user-select: none;
+	}
+}
+.c3-legend-item-tile {
+	shape-rendering: crispEdges;
+}
+.c3-xgrid-focus {
+	shape-rendering: crispEdges;
+}
+.c3-ygrid {
+	shape-rendering: crispEdges;
+	stroke-dasharray: 3 3;
+}
+.c3-event-rect {
+	shape-rendering: crispEdges;
+}
+.c3-chart-arc {
+	path {
+		stroke: $white;
+	}
+	text {
+		fill: $white;
+		font-size: 13px;
+	}
+	.c3-gauge-value {
+		fill: $black;
+	}
+}
+.c3-grid {
+	line {
+		stroke: $color_silver_chalice_approx;
+	}
+	text {
+		fill: $color_silver_chalice_approx;
+	}
+}
+.c3-xgrid {
+	stroke-dasharray: 3 3;
+}
+.c3-line {
+	stroke-width: 1px;
+}
+.c3-selected-circle {
+	fill: $white;
+	stroke-width: 2px;
+}
+.c3-bar {
+	stroke-width: 0;
+	&._expanded_ {
+		fill-opacity: 0.75;
+	}
+}
+.c3-target {
+	&.c3-focused {
+		opacity: 1;
+		path {
+			&.c3-line {
+				stroke-width: 2px;
+			}
+			&.c3-step {
+				stroke-width: 2px;
+			}
+		}
+	}
+	&.c3-defocused {
+		opacity: 0.3 !important;
+	}
+}
+.c3-region {
+	fill: $steel_blue;
+	fill-opacity: .1;
+}
+.c3-legend-item {
+	font-size: 12px;
+}
+.c3-legend-item-hidden {
+	opacity: 0.15;
+}
+.c3-legend-background {
+	opacity: 0.75;
+	fill: $white;
+	stroke: $color_quill_gray_approx;
+	stroke-width: 1;
+}
+.c3-title {
+	font: 14px $font_0;
+}
+.c3-tooltip-container {
+	z-index: 10;
+}
+.c3-tooltip {
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: $white;
+	empty-cells: show;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 7px 7px 12px -9px $color_tapa_approx;
+	opacity: 0.9;
+	tr {
+		border: 1px solid $color_celeste_approx;
+	}
+	th {
+		background-color: $color_silver_chalice_approx;
+		font-size: 14px;
+		padding: 2px 5px;
+		text-align: left;
+		color: $white;
+	}
+	td {
+		font-size: 13px;
+		padding: 3px 6px;
+		background-color: $white;
+		border-left: 1px dotted $color_mountain_mist_approx;
+		> span {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin-right: 6px;
+		}
+		&.value {
+			text-align: right;
+		}
+	}
+}
+.c3-area {
+	stroke-width: 0;
+	opacity: 0.2;
+}
+.c3-chart-arcs-title {
+	dominant-baseline: middle;
+	font-size: 1.3em;
+}
+.c3-chart-arcs {
+	.c3-chart-arcs-background {
+		fill: $color_bon_jour_approx;
+		stroke: none;
+	}
+	.c3-chart-arcs-gauge-unit {
+		fill: $black;
+		font-size: 16px;
+	}
+	.c3-chart-arcs-gauge-max {
+		fill: $color_tapa_approx;
+	}
+	.c3-chart-arcs-gauge-min {
+		fill: $color_tapa_approx;
+	}
+}
+.c3-bars path {
+	shape-rendering: crispEdges;
+}
+.c3-text.c3-empty {
+	fill: $gray;
+	font-size: 2em;
+}
+.c3-circle._expanded_ {
+	stroke-width: 1px;
+	stroke: $white;
+}
+.c3-brush .extent {
+	fill-opacity: .1;
+}

@@ -1,0 +1,72 @@
+// Weather Card ... Component/cards (Just defining gradient for weather cards)
+$sunny-grade-default: color('orange', 'base');
+$sunny-grade-c1: color('orange', 'lighten-2');
+$sunny-grade-c2: color('orange', 'lighten-4');
+// cloudy
+$cloudy-grade-default: color('light-blue', 'lighten-1');
+$cloudy-grade-c1: color('light-blue', 'lighten-2');
+$cloudy-grade-c2: color('light-blue', 'lighten-3');
+$rain-grade-default: color('grey', 'base');
+$rain-grade-c1: color('grey', 'base');
+$rain-grade-c2: color('blue-grey', 'lighten-3');
+$rainbow-grade-default: color('light-blue', 'accent-1');
+$rainbow-grade-c1: color('light-blue', 'base');
+$rainbow-grade-c2: color('amber', 'lighten-4');
+$moon-grade-default: color('grey', 'darken-4');
+$moon-grade-c1: color('grey', 'darken-4');
+$moon-grade-c2: color('light-blue', 'lighten-4');
+$stormy-grade-default: color('light-blue', 'lighten-1');
+$stormy-grade-c1: color('light-blue', 'lighten-2');
+$stormy-grade-c2: color('light-blue', 'lighten-3');
+$snow-grade-default: color('light-blue', 'lighten-3');
+$snow-grade-c1: color('light-blue', 'lighten-2');
+$snow-grade-c2: color('light-blue', 'lighten-1');
+.sunny-grade {
+    @include linear-gradient($sunny-grade-default, $sunny-grade-c1, $sunny-grade-c2);
+}
+
+.sunnycloud-grade {
+    @include linear-gradient($sunny-grade-default, $sunny-grade-c1, $cloudy-grade-c1);
+}
+
+.cloudy-grade {
+    @include linear-gradient($cloudy-grade-default, $cloudy-grade-c1, $cloudy-grade-c2);
+}
+
+.rainy-grade {
+    @include linear-gradient($rain-grade-default, $rain-grade-c1, $rain-grade-c2);
+}
+
+.rainbow-grade {
+    @include linear-gradient($rainbow-grade-default, $rainbow-grade-c1, $rainbow-grade-c2);
+}
+
+.moon-grade {
+    @include linear-gradient($moon-grade-default, $moon-grade-c1, $moon-grade-c2);
+}
+
+.stormy-grade {
+    @include linear-gradient($stormy-grade-default, $stormy-grade-c1, $stormy-grade-c2);
+}
+
+.snow-grade {
+    @include linear-gradient($snow-grade-default, $snow-grade-c1, $snow-grade-c2);
+}
+
+.weather-row {
+    margin: 0;
+    padding: 0;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    .vert-center {
+        line-height: inherit;
+    }
+}

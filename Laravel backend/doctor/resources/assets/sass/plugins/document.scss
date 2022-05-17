@@ -1,0 +1,56 @@
+@import "../partials/variables";
+main{
+	background: $body-color;
+}
+.side-nav, nav{
+	background-color: #424242;
+	li{
+		&.bold{
+			a{
+				color:#FFF;
+			}
+		}
+		.collapsible-body{
+			li{
+				a{
+					color:rgba(0,0,0,.87);
+				}
+			}
+		}
+	}
+}
+.header{
+	color: $secondary-color;
+}
+#nav-mobile li.search{
+	input#search{
+		box-shadow:none;
+		width:80% !important;
+	}
+	&:hover{
+		background: transparent;
+		background-color: transparent;
+	}
+}
+ul.side-nav.fixed ul.collapsible-accordion{
+	background-color: #424242;	
+}
+ul.side-nav.fixed li.active{
+	background-color:$primary-color-light;
+}
+#index-banner{
+	background: $primary-color;
+}
+.side-nav .collapsible-body, .side-nav.fixed .collapsible-body{
+	background: #424242;
+	a{
+		color : #FFF;
+		&.active{
+			color:$info-color;
+		}
+	}
+}
+.waves-color-demo .btn:not(.waves-light), .waves-color-demo .btn-large:not(.waves-light){
+	background-color: #fff;
+    color: #212121;
+}

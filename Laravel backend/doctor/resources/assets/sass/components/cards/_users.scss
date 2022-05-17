@@ -1,0 +1,292 @@
+// User Card ... Component/cards
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. User card widget / .user-widget
+	- .user-widget-type3
+	- .user-widget-type4
+2. User card image widget (Image based card) / .card-image-widget
+
+-------------------------------------------------------------------*/
+
+$card-userpic-img:100px;
+$card-image-widget:300px;
+$inline-static-item-border:#e3e3e3;
+$inline-static-item-w:50px;
+.halfway-up-fab {
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    transform: translateY(-70%);
+}
+
+// USER WIDGET
+.user-widget {
+    .user-widget-type3 {
+        @extend .white;
+        .card-image {
+            .internal-action-top {
+                height: $usr-widget-type1-internal-action-height;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: $usr-widget-type1-internal-action-height;
+                .user-action {
+                    position: relative;
+                    height: $usr-widget-type1-internal-action-height;
+                    .actions-list {
+                        position: absolute;
+                        top: 0;
+                        right: 10px;
+                        height: inherit;
+                        a.btn-floating {
+                            height: 30px;
+                            width: 30px;
+                            &.open-action {
+                                background: rgba(0, 191, 165, 0.9);
+                            }
+                            i {
+                                font-size: 1.2rem;
+                                height: 15px;
+                                width: 30px;
+                                line-height: 15px;
+                            }
+                        }
+                        ul {
+                            li {
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .type2-widget-row {
+                        &::before {
+                            @include overlay(rgba(33, 33, 33, 0.6), 100%, 100%, -1);
+                        }
+                        p {
+                            line-height: $usr-widget-type2-internal-actionBtm-height;
+                            height: $usr-widget-type2-internal-actionBtm-height;
+                            &.statistic-set {
+                                span {
+                                    &.statistic-title {
+                                        display: block;
+                                        line-height: $usr-widget-type2-internal-actionBtm-height * 0.60;
+                                    }
+                                    &.counter {
+                                        display: block;
+                                        line-height: $usr-widget-type2-internal-actionBtm-height * 0.20;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                        .person-add-btn {
+                            position: relative;
+                            right: 30px;
+                            top: -20px;
+                        }
+                    }
+                    .no-fixed-action {
+                        a {
+                            margin: 0 3px;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .internal-action-bottom-mid {
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                width: 100%;
+            }
+        }
+        // Sec3
+        .card-action {
+            a {
+                &.basic-btn {
+                    margin: 0 3px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .user-statistics {
+                .with-top-text {
+                    margin-top: 4px;
+                }
+                p {
+                    &.statistic-set {
+                        height: $usr-widget-type2-internal-actionBtm-height;
+                        line-height: $usr-widget-type2-internal-actionBtm-height;
+                        span {
+                            &.statistic-title {
+                                display: block;
+                                line-height: $usr-widget-type2-internal-actionBtm-height * 0.60;
+                            }
+                            &.counter {
+                                display: block;
+                                line-height: $usr-widget-type2-internal-actionBtm-height * 0.20;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card-content {
+            p {}
+            .user-statistics {
+                @extend .card-statistics;
+            }
+        }
+    }
+    .user-widget-type4 {
+        @extend .white;
+        .card-title {
+            width: 100%;
+        }
+        .card-image {
+            img {
+                height: 230px;
+            }
+            a.activator {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                &:hover {
+                    @extend .white;
+                }
+            }
+        }
+        .card-content {
+            img {
+                &.round-img {
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+            .set-top-right {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                &:hover {
+                    @extend .white;
+                }
+            }
+            .designation {
+                font-size: 18px;
+            }
+            .socialization {
+                margin-top: 10px;
+                a {
+                    margin: 0 5px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    i {
+                        // color: #909090;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// USER WIDGET ENDS
+// USER CARD
+.card-image-widget {
+    position: relative;
+    height: $card-image-widget;
+    width: auto;
+    .bg-image {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        height: $card-image-widget;
+        width: 100%;
+    }
+    a {
+        z-index: 4;
+    }
+    .widget-container {
+        position: absolute;
+        height: $card-image-widget;
+        display: block;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        opacity: 1;
+        padding: 10px;
+        overflow-y: auto;
+    }
+}
+
+.card {
+    &.card-user-widget01 {
+        .card-image {
+            &.bg-only {
+                .bg-placeholder {
+                    height: 200px;
+                }
+            }
+            // 
+            .card-userpic {
+                position: absolute;
+                transform: translateY(-50%);
+                left: calc(50% - #{$card-userpic-img/2});
+                z-index: 2;
+                img {
+                    border: 3px solid #FFF;
+                    border-radius: 50% !important;
+                    @extend .responsive-img;
+                    width: $card-userpic-img;
+                }
+            }
+            .bg-placeholder {
+                height: 100px;
+            }
+        }
+        .card-content {
+            padding-top: calc(#{$card-userpic-img/2} + 10px);
+            position: relative;
+            padding-bottom: 60px;
+            .widget-inline-static {
+                display: block;
+                position: absolute;
+                float: left;
+                border: none;
+                width: 100%;
+                margin: 0;
+                left: 0;
+                bottom: 0;
+                .inline-static-item {
+                    @extend .center;
+                    height: $inline-static-item-w;
+                    line-height: $inline-static-item-w;
+                    border-right: 1px solid $inline-static-item-border;
+                    border-top: 1px solid $inline-static-item-border;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    i {
+                        line-height: $inline-static-item-w;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.col {
+    &.demo-modals {
+        a {
+            margin: 5px 10px;
+        }
+    }
+    .waves-color-demo {
+        .collection-item {
+            height: 57px;
+            line-height: 57px;
+        }
+    }
+    &.grid-example {
+        border: 1px solid #eee;
+        margin: 7px 0;
+        text-align: center;
+        line-height: 50px;
+        font-size: 28px;
+        background-color: tomato;
+        color: white;
+        padding: 0;
+    }
+    .button-example {
+        a {
+            margin-right: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .browser-window {
+        text-align: left;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        border-radius: 5px 5px 2px 2px;
+        background-color: #fff;
+        margin: 20px 0px;
+        overflow: hidden;
+        .top-bar {
+            height: 30px;
+            border-radius: 5px 5px 0 0;
+            border-top: thin solid #eaeae9;
+            border-bottom: thin solid #dfdfde;
+            // background: linear-gradient(#e7e7e6, #E2E2E1);
+            .circle {
+                height: 10px;
+                width: 10px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: #fff;
+                margin-right: 1px;
+            }
+        }
+        .circles {
+            margin: 5px 12px;
+        }
+        #close-circle {
+            background-color: #FF5C5A;
+        }
+        #minimize-circle {
+            background-color: #FFBB50;
+        }
+        #maximize-circle {
+            background-color: #1BC656;
+        }
+        #site-layout-example-left {
+            background-color: #90a4ae;
+            height: 300px;
+        }
+        #site-layout-example-right {
+            background-color: #26a69a;
+            height: 300px;
+        }
+        .content {
+            margin: 0;
+            width: 100%;
+            display: inline-block;
+            border-radius: 0 0 5px 5px;
+            background-color: #fafafa;
+            .container {
+                .flat-text {
+                    height: 25px;
+                    width: 80%;
+                    background-color: rgba(0, 0, 0, 0.15);
+                    display: block;
+                    margin: 27px auto;
+                    &.small {
+                        width: 25%;
+                        height: 25px;
+                        background-color: rgba(0, 0, 0, 0.15);
+                    }
+                    &.full-width {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .row {
+            margin: 0;
+        }
+        .flat-text-header {
+            height: 35px;
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.15);
+            display: block;
+            margin: 27px auto;
+        }
+        .flat-text {
+            height: 25px;
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.15);
+            display: block;
+            margin: 27px auto;
+        }
+        #site-layout-example-top {
+            background-color: #E57373;
+            height: 42px;
+        }
+        #site-layout-example-right {
+            background-color: #26a69a;
+            height: 300px;
+        }
+    }
+    .valign-demo {
+        height: 400px;
+        background: #ddd;
+    }
+    .talign-demo {
+        height: 100px;
+        background: #ddd;
+        h5 {
+            line-height: 110px;
+        }
+    }
+    .shadow-demo {
+        background-color: #26a69a;
+        width: 100px;
+        height: 100px;
+        margin: 20px auto;
+    }
+    .material-icons {
+        &.icon-demo {
+            line-height: 50px;
+        }
+    }
+    .icon-container {
+        i {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .icon-preview {
+            height: 120px;
+            text-align: center;
+            @extend .no-mrpd;
+        }
+        span {
+            display: block;
+        }
+    }
+}
+
+.tab-swap-demo {
+    height: 200px;
+}

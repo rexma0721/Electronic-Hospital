@@ -1,0 +1,87 @@
+//colors
+$color_mountain_mist_approx: #999;
+$color_tundora_approx: #444;
+$color_jungle_green_approx: #26a69a;
+$color_tapa_approx: #777;
+$white: #ffffff;
+$black_35: rgba(0, 0, 0, 0.35);
+$color_cerulean_approx: deepskyblue;
+
+.materialize-tags {
+	background: transparent;
+	border-bottom: 1px solid $color_mountain_mist_approx;
+	display: inline-block;
+	padding: 0 6px;
+	margin-bottom: 10px;
+	color: $color_tundora_approx;
+	vertical-align: middle;
+	width: 100%;
+	max-width: 100%;
+	line-height: 22px;
+	cursor: text;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all .3s;
+	&.active {
+		border-bottom-color: $color_jungle_green_approx;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 1px 0 0 $color_jungle_green_approx;
+		outline: none;
+	}
+	input {
+		border: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+		outline: none;
+		background-color: transparent;
+		padding: 0;
+		margin: 0;
+		width: auto !important;
+		max-width: inherit;
+		&:-ms-input-placeholder {
+			color: $color_tapa_approx;
+		}
+		&:focus {
+			border: none !important;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none !important;
+		}
+	}
+	input::-moz-placeholder {
+		color: $color_tapa_approx;
+		opacity: 1;
+	}
+	input::-webkit-input-placeholder {
+		color: $color_tapa_approx;
+	}
+	.tt-hint {
+		position: relative !important;
+	}
+	.tt-input {
+		position: absolute !important;
+		left: 0;
+		width: 100% !important;
+	}
+	.tt-dropdown-menu {
+		min-width: 200px;
+		max-width: 100%;
+		padding: 10px 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		background: $white;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 5px $black_35;
+		.tt-suggestion {
+			line-height: 1.1rem !important;
+			padding: 2px 10px !important;
+		}
+		.tt-cursor {
+			background: $color_cerulean_approx;
+			color: $white;
+		}
+	}
+}
+@media screen and(max-width: 600px) {
+	.materialize-tags {
+		margin-top: 8px;
+	}
+}

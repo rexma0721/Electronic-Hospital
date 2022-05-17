@@ -1,0 +1,848 @@
+// User Pages : Profile Page
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Wrapper (Wrapper class ) / .profile-wrapper
+	- Cover pic / .profile-cover
+		- Internal components
+			- / .profile-coverPic
+			-/  .profile-content
+	-  Tabs / .profile-tabs
+		- Containers
+			- / .profile-container
+			- / .profile-data
+			- / #about , #timeline, #userProfileSettings, #agenda
+------------------------------------------------------------------*/
+
+.profile-wrapper {
+    .profile-cover {
+        position: relative;
+        display: block;
+        .profile-coverPic {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            height: $profile-coverPic-height;
+            z-index: -1;
+            // &:before{
+            // 	@extend .overlay1;
+            // }
+        }
+        .profile-content {
+            position: absolute;
+            width: 100%;
+            // height: 350px;
+            // max-height: 350px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            .profile-left-container {
+                position: absolute;
+                top: $profile-coverPic-height/2 - $proifilePic-profileCover/2;
+                left: 20px;
+                img.proifile-pic {
+                    height: $proifilePic-profileCover;
+                    width: $proifilePic-profileCover;
+                    @extend .circle;
+                    float: left;
+                }
+                .user-info {
+                    float: left;
+                    margin-left: 20px;
+                    .user-fullname {
+                        @extend .no-mrpd;
+                        margin-left: 10px;
+                    }
+                    .user-location {
+                        @extend .no-mrpd,
+                        .grey-text,
+                        .text-lighten-2;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .profile-right-container {
+                position: absolute;
+                top: calc($profile-coverPic-height / 2 - 48px / 2);
+                right: 10px;
+                height: 48px;
+                width: 120px;
+                .profileCover-options {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    @extend .no-mrpd;
+                    a.menuOpt {
+                        background: rgba(38, 166, 154, 0.40);
+                    }
+                    ul {
+                        li {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .profile-tabs {
+        @extend .no-mrpd;
+        margin-top: 25px !important;
+        .profile-container {
+            @extend .no-mrpd;
+            ul.user-profile-tabs {
+                background: $user-profile-tabs-bg;
+                li {
+                    a {
+                        color: #FFF;
+                        &.active {
+                            color: #FFF;
+                        }
+                    }
+                }
+                .indicator {
+                    background: $secondary-color;
+                }
+            }
+        }
+        .profile-data {
+            @extend .no-mrpd;
+            .data-row {
+                width: calc(100% - 25px);
+                margin: 0;
+                float: right;
+                .card-profile-aside {
+                    margin-top: 0 !important;
+                    height: 265px;
+                    span.indicateBadge {
+                        @extend .badge;
+                        @include spanBadge(#424242, '');
+                    }
+                    .card-content {
+                        @extend .no-mrpd;
+                        .user-connectivity {
+                            margin-top: 0;
+                            margin-bottom: 25px;
+                            .collection-item {
+                                color: #212121;
+                            }
+                            .box-head {
+                                padding: 0 20px;
+                                margin-top: 8px;
+                                a.modal-trigger {
+                                    height: 49px;
+                                    line-height: 49px;
+                                    color: #212121;
+                                    i {
+                                        line-height: inherit;
+                                    }
+                                }
+                                #profile-c3Chart {
+                                    height: 400px;
+                                    max-height: 400px;
+                                    .modal-content {
+                                        height: inherit;
+                                    }
+                                    .close-profile-chart {
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        .user-skills {
+                            margin: 0;
+                            margin-bottom: 25px;
+                            .box-head {
+                                padding-bottom: 0;
+                                a.modal-trigger {
+                                    height: 49px;
+                                    line-height: 49px;
+                                    color: #212121;
+                                    i {
+                                        line-height: inherit;
+                                    }
+                                }
+                                #userSkill-c3Chart {
+                                    height: 400px;
+                                    max-height: 400px;
+                                    .modal-content {
+                                        height: inherit;
+                                    }
+                                    .close-profile-chart {
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 10px;
+                                    }
+                                }
+                            }
+                            p {
+                                &.range-field {
+                                    padding: 0 10px 10px 10px;
+                                }
+                                &.skill-title {
+                                    padding: 10px 10px 0 10px;
+                                }
+                            }
+                        }
+                    }
+                    .card-panel {
+                        &.user-mail {
+                            a {
+                                &.btn-flat {
+                                    padding: 0 !important;
+                                    text-transform: lowercase;
+                                }
+                            }
+                        }
+                        &.user-location {
+                            @extend .no-mrpd;
+                            margin-bottom: 25px !important;
+                            #map {
+                                height: 300px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Tab : About
+        #about {
+            .row {
+                @extend .no-mrpd;
+                .col {
+                    @extend .no-mrpd;
+                    .card-panel {
+                        // @include linear-gradient(to right, #212121 0%, #bdbdbd 50%, #e0e0e0 100%);
+                        h4 {
+                            &.card-title {
+                                @extend .no-mrpd;
+                                font-size: 22px;
+                            }
+                        }
+                        .card-contents {
+                            position: relative;
+                            .experience-list-item {
+                                margin-left: 20px;
+                                margin-bottom: 20px;
+                                .divider {
+                                    margin-top: 15px;
+                                }
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    @extend .grey,
+                                    .darken-2;
+                                    width: 2px;
+                                    height: calc(100% - 5px);
+                                    left: 5px;
+                                    top: 5px;
+                                    z-index: 0;
+                                }
+                                .work-title {
+                                    font-size: 18px;
+                                    position: relative;
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        width: 12px;
+                                        height: 12px;
+                                        @extend .circle,
+                                        .z-depth-1,
+                                        .grey,
+                                        .darken-2;
+                                        left: -20px;
+                                        top: 3px;
+                                        z-index: 1;
+                                        border: 1px solid #757575;
+                                    }
+                                }
+                                .work-duration {
+                                    @extend .no-mrpd;
+                                    @extend .secondary-text;
+                                    position: relative;
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 2px;
+                                        @extend .grey,
+                                        .darken-2;
+                                        left: -14px;
+                                        top: 8px;
+                                        z-index: 1;
+                                    }
+                                }
+                                .word-description {
+                                    @extend .no-mrpd;
+                                    @extend .grey-text,
+                                    .text-darken-1;
+                                }
+                            }
+                            &.hobbies-items {
+                                display: block;
+                                overflow: hidden;
+                                text-align: center;
+                                a.hobbies-item {
+                                    display: block;
+                                    float: left;
+                                    overflow: hidden;
+                                    margin: 5px 10px;
+                                    text-align: center;
+                                    i {
+                                        font-size: 36px;
+                                        line-height: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #timeline {
+            display: block;
+            float: left;
+            position: relative;
+            top: 10px;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            .row {
+                @extend .no-mrpd;
+                .col {
+                    @extend .no-mrpd;
+                    .timeline-wrapper {
+                        ul.dropdown-content {
+                            li {
+                                @extend .no-mrpd;
+                                height: $timeline-post-dropdown-content-height;
+                                line-height: $timeline-post-dropdown-content-height;
+                                min-height: $timeline-post-dropdown-content-height;
+                                padding: 0 10px;
+                                a {
+                                    @extend .no-mrpd;
+                                    height: $timeline-post-dropdown-content-height;
+                                    line-height: $timeline-post-dropdown-content-height;
+                                    color: $timeline-post-dropdown-content-color;
+                                    span {
+                                        display: block;
+                                        height: $timeline-post-dropdown-content-height;
+                                        line-height: $timeline-post-dropdown-content-height;
+                                        float: left;
+                                    }
+                                    i {
+                                        display: block;
+                                        height: $timeline-post-dropdown-content-height;
+                                        line-height: $timeline-post-dropdown-content-height;
+                                        float: left;
+                                        padding-right: 5px;
+                                        color: $timeline-post-dropdown-content-iColor;
+                                    }
+                                }
+                                &:hover {
+                                    background: $timeline-post-dropdown-content-hoverBG;
+                                }
+                            }
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: -7px;
+                            left: 35px;
+                            z-index: 1;
+                            @extend .primary-bg,
+                            .circle;
+                            width: 8px;
+                            height: 8px;
+                            @extend .circle,
+                            .z-depth-1,
+                            .grey,
+                            .darken-2;
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: 2px;
+                            left: 35px;
+                            z-index: 1;
+                            @extend .primary-bg,
+                            .circle;
+                            width: 8px;
+                            height: 8px;
+                            @extend .circle,
+                            .z-depth-1,
+                            .grey,
+                            .darken-2;
+                        }
+                        // TIMELINE-POST
+                        div.timeline-post {
+                            display: block;
+                            float: left;
+                            width: 100%;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                width: 2px;
+                                height: calc(100% - 10px);
+                                left: 38px;
+                                top: 0;
+                                z-index: 0;
+                                @extend .grey,
+                                .darken-2;
+                            }
+                            // USER DP
+                            div.user-dp {
+                                width: $timeline-user-dp-width;
+                                position: relative;
+                                float: left;
+                                padding: 0 0 0 10px;
+                                z-index: 1;
+                                img.user-dp {
+                                    width: 58px;
+                                    border: 4px solid #FFF;
+                                }
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    content: "";
+                                    position: absolute;
+                                    @extend .grey,
+                                    .darken-2;
+                                    width: 75px;
+                                    height: 2px;
+                                    left: 10px;
+                                    top: 28px;
+                                    z-index: -1;
+                                }
+                            }
+                            // POST CONTENT
+                            div.post-content {
+                                display: block;
+                                float: left;
+                                width: 100%;
+                                width: calc(100% - 100px);
+                                margin: 0px 0px 10px 0;
+                                padding: 10px;
+                                // background : $post-content-bg;
+                                @extend .card-panel;
+                                div.post-header {
+                                    display: block;
+                                    float: left;
+                                    width: 100%;
+                                    div.post-title {
+                                        float: left;
+                                        h6 {
+                                            @extend .no-mrpd;
+                                            color: $timeline-post-title-color;
+                                            height: $timeline-post-header-height;
+                                            line-height: $timeline-post-header-height;
+                                            font-weight: 600;
+                                            padding-left: 10px;
+                                        }
+                                    }
+                                    div.post-options {
+                                        float: right;
+                                        a.dropdown-button {
+                                            display: block;
+                                            height: $timeline-post-header-height;
+                                            line-height: $timeline-post-header-height;
+                                            color: $timeline-post-options-color;
+                                            i {
+                                                display: block;
+                                                height: $timeline-post-header-height;
+                                                line-height: $timeline-post-header-height;
+                                                &.left {
+                                                    color: $timeline-post-options-iLColor;
+                                                }
+                                                &.right {
+                                                    color: $timeline-post-options-iRColor;
+                                                }
+                                            }
+                                            span {
+                                                display: block;
+                                                height: $timeline-post-header-height;
+                                                line-height: $timeline-post-header-height;
+                                                float: left;
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                                div.post-container {
+                                    width: 100%;
+                                    padding-bottom: 10px;
+                                    float: left;
+                                    display: block;
+                                    p {
+                                        @extend .no-mrpd;
+                                        line-height: 1.3em;
+                                        position: relative;
+                                        padding: 10px;
+                                    }
+                                    img {
+                                        @extend .no-mrpd;
+                                        width: inherit;
+                                    }
+                                    .combo-post {
+                                        img {
+                                            width: 40%;
+                                            @extend .no-mrpd;
+                                            padding: 10px;
+                                        }
+                                        p {
+                                            width: 60%;
+                                            @extend .no-mrpd;
+                                            line-height: 1.3em;
+                                            position: relative;
+                                            padding: 10px;
+                                        }
+                                    }
+                                }
+                                .footer-divider {
+                                    margin: 5px 0;
+                                }
+                                div.post-footer {
+                                    display: block;
+                                    float: left;
+                                    width: 100%;
+                                    div.post-footer-left {
+                                        float: left;
+                                        ul.post-options {
+                                            @extend .no-mrpd;
+                                            width: 100%;
+                                            display: block;
+                                            float: left;
+                                            margin-left: 35px !important;
+                                            height: $post-footer-opt-height;
+                                            z-index: 1;
+                                            li {
+                                                @extend .no-mrpd;
+                                                height: $post-footer-opt-height;
+                                                line-height: $post-footer-opt-height;
+                                                min-height: $post-footer-opt-height;
+                                                float: left;
+                                                a {
+                                                    padding: 0 10px;
+                                                    @extend .no-mrpd;
+                                                    height: $post-footer-opt-height;
+                                                    line-height: $post-footer-opt-height;
+                                                    color: $post-footer-color;
+                                                    span {
+                                                        display: block;
+                                                        height: $post-footer-opt-height;
+                                                        line-height: $post-footer-opt-height;
+                                                        float: left;
+                                                    }
+                                                    i {
+                                                        display: block;
+                                                        height: $post-footer-opt-height;
+                                                        line-height: $post-footer-opt-height;
+                                                        float: left;
+                                                        width: 25px;
+                                                        padding-right: 5px;
+                                                        &.left {
+                                                            margin: 0;
+                                                            color: $post-footer-iLColor;
+                                                        }
+                                                        &.right {
+                                                            margin: 0;
+                                                            color: $post-footer-iRColor;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        ul.post-response {
+                                            @extend .no-mrpd;
+                                            width: 100%;
+                                            display: block;
+                                            float: left;
+                                            li {
+                                                float: left;
+                                                a {
+                                                    height: 20px;
+                                                    width: 20px;
+                                                    i {
+                                                        font-size: 0.8rem;
+                                                        line-height: 20px;
+                                                        height: 20px;
+                                                        display: block;
+                                                    }
+                                                }
+                                                &:last-child {
+                                                    a {
+                                                        width: auto !important;
+                                                        font-size: 12px;
+                                                        line-height: 22px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .post-react-action {
+                                            position: relative;
+                                            height: $post-react-action-height;
+                                            left: -15px;
+                                            .fixed-action-btn {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                z-index: 2;
+                                                a {
+                                                    height: $post-react-action-height;
+                                                    width: $post-react-action-width;
+                                                    i {
+                                                        font-size: 0.8rem;
+                                                        line-height: $post-react-action-height;
+                                                        height: $post-react-action-height;
+                                                        display: block;
+                                                    }
+                                                }
+                                                ul {
+                                                    top: -14px;
+                                                    left: 45px;
+                                                    text-align: left;
+                                                    li {
+                                                        margin-right: 0;
+                                                        a {
+                                                            height: $post-react-action-ul;
+                                                            width: $post-react-action-ul;
+                                                            i {
+                                                                font-size: 0.9rem;
+                                                                line-height: $post-react-action-ul;
+                                                                height: $post-react-action-ul;
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    div.post-footer-right {
+                                        float: right;
+                                        ul.post-options {
+                                            @extend .no-mrpd;
+                                            width: 100%;
+                                            display: block;
+                                            float: left;
+                                            li {
+                                                @extend .no-mrpd;
+                                                height: $post-footer-opt-height;
+                                                line-height: $post-footer-opt-height;
+                                                min-height: $post-footer-opt-height;
+                                                float: left;
+                                                a {
+                                                    text-transform: initial;
+                                                    padding: 0 10px;
+                                                    @extend .no-mrpd;
+                                                    height: $post-footer-opt-height;
+                                                    line-height: $post-footer-opt-height;
+                                                    color: $post-footer-color;
+                                                    span {
+                                                        display: block;
+                                                        height: $post-footer-opt-height;
+                                                        line-height: $post-footer-opt-height;
+                                                        float: left;
+                                                    }
+                                                    i {
+                                                        display: block;
+                                                        height: $post-footer-opt-height;
+                                                        line-height: $post-footer-opt-height;
+                                                        float: left;
+                                                        padding-right: 5px;
+                                                        &.left {
+                                                            margin: 0;
+                                                            color: $post-footer-iLColor;
+                                                        }
+                                                        &.right {
+                                                            margin: 0;
+                                                            color: $post-footer-iRColor;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        ul.post-response {
+                                            @extend .no-mrpd;
+                                            width: 100%;
+                                            display: block;
+                                            float: left;
+                                            li {
+                                                float: left;
+                                                a {
+                                                    height: 20px;
+                                                    line-height: 20px;
+                                                    @extend .blue,
+                                                    .white-text;
+                                                    margin: 2px;
+                                                    padding: 0 5px;
+                                                    font-size: 12px;
+                                                    @include border-radius(5px);
+                                                    i {
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        font-size: 1rem;
+                                                        line-height: 20px;
+                                                        @extend .no-mrpd;
+                                                    }
+                                                }
+                                                &:last-child {
+                                                    a {
+                                                        margin: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .comment-list {
+                                        ul.collection {
+                                            padding-bottom: 5px;
+                                            border: 0;
+                                            li {
+                                                @extend .no-mrpd;
+                                                width: inherit;
+                                                min-height: 64px;
+                                                height: auto;
+                                                box-shadow: none;
+                                                border: none;
+                                                &.comment-itm {
+                                                    padding: 5px 5px 0 0;
+                                                    a {
+                                                        display: block;
+                                                        float: left;
+                                                        height: 100%;
+                                                        @extend .no-mrpd;
+                                                        &.commenting-user {
+                                                            padding: 0px 8px;
+                                                            line-height: 53px;
+                                                            float: left;
+                                                            img {
+                                                                width: 40px;
+                                                                height: 40px;
+                                                                display: block;
+                                                                @extend .circle;
+                                                            }
+                                                        }
+                                                        &:hover {
+                                                            background: none;
+                                                        }
+                                                    }
+                                                    .comment-data {
+                                                        width: calc( 100% - 56px);
+                                                        float: left;
+                                                        span.title {
+                                                            width: 100%;
+                                                            display: block;
+                                                            float: left;
+                                                            color: $chat-usr-name-color;
+                                                            font-size: 14px;
+                                                            text-align: left;
+                                                        }
+                                                        p.comment-desc {
+                                                            width: 100%;
+                                                            display: block;
+                                                            float: left;
+                                                            line-height: 1em;
+                                                            color: $nav-msgs-content-clr;
+                                                            text-align: justify;
+                                                            text-justify: inter-word;
+                                                            font-size: 14px;
+                                                        }
+                                                        span.comment-time {
+                                                            float: left;
+                                                            width: 100%;
+                                                            display: block;
+                                                            text-align: right;
+                                                            color: $nav-msgs-time-clr;
+                                                            font-size: 12px;
+                                                            line-height: 1.3em;
+                                                        }
+                                                    }
+                                                }
+                                                &:hover {
+                                                    background: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .addComment-area-section {
+                                        a {
+                                            display: block;
+                                            float: left;
+                                            height: 100%;
+                                            @extend .no-mrpd;
+                                            &.commenting-user {
+                                                padding: 0px 8px;
+                                                line-height: 53px;
+                                                float: left;
+                                                img {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    display: block;
+                                                    @extend .circle;
+                                                }
+                                            }
+                                            &:hover {
+                                                background: none;
+                                            }
+                                        }
+                                        .comment-input-block {
+                                            width: calc(100% - 80px);
+                                            float: left;
+                                            span.title {
+                                                width: 100%;
+                                                display: block;
+                                                float: left;
+                                                color: $chat-usr-name-color;
+                                                font-size: 14px;
+                                                text-align: left;
+                                            }
+                                            textarea.comment-input {
+                                                float: left;
+                                                @extend .no-mrpd;
+                                                margin-bottom: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Tab : Settings
+        #userProfileSettings {
+            .row {
+                .profile-info-form,
+                .profile-setting-form {
+                    @extend .no-mrpd;
+                    .profile-form-cardpanel {
+                        padding: 10px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        // Tab : Agenda
+        #agenda {
+            .row {
+                .col {
+                    padding: 0 !important;
+                }
+            }
+            .calender-agenda {
+                #external-events {
+                    .fc-event {
+                        margin-bottom: 5px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

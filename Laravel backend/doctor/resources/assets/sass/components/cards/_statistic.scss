@@ -1,0 +1,60 @@
+// Statistic Card ... Component/cards
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. card (internal class for statistic cards) / .card 
+2. statistic Card ( Style) / .static-card
+	- card container / .card-container
+	- statistic content / .card-static-content
+-------------------------------------------------------------------*/
+
+$static-content-width: 100px;
+$static-card-container-gtr: 10px;
+$statistic-grade-default: color('light-blue', 'lighten-5');
+$statistic-grade-c1: color('light-blue', 'lighten-4');
+$statistic-grade-c2: color('grey', 'darken-1');
+.statistic-grade1 {
+    @include linear-gradient($statistic-grade-default, $statistic-grade-c1, $statistic-grade-c2);
+}
+
+.card,
+.card-panel {
+    .card-row {
+        .card-col {
+            float: left;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+                width: 100%;
+            }
+            &.bigflot {
+                height: $button-floating-large-size;
+            }
+            &.baseflot {
+                height: $button-floating-size;
+            }
+        }
+    }
+}
+
+.static-card {
+    overflow: hidden;
+    .card-container {
+        display: block;
+        float: left;
+        width: calc(100% - #{$static-content-width});
+        padding: 0 $static-card-container-gtr;
+    }
+    .card-static-content {
+        display: block;
+        float: left;
+        width: $static-content-width;
+        text-align: center;
+    }
+}

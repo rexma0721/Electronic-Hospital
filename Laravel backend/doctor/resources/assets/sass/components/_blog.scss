@@ -1,0 +1,84 @@
+// Blog  ...
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Card (Defining card for blog) / .blog-card
+	- header / .post-header
+		- Auther / .author-img
+		- Header content / .post-header-content
+	- Post picture /.blog-post-image
+	- share / .blog-fab-share
+2. Commnet section / .blog-comments
+
+------------------------------------------------------------------*/
+
+$blog-author-img: 75px;
+$blog-post-title-font:24px;
+$comment-border-color: color("grey", "lighten-2");
+.blog-card {
+    overflow: hidden;
+    .post-header {
+        margin-bottom: 25px;
+        display: block;
+        float: left;
+        .author-img {
+            height: $blog-author-img;
+            width: $blog-author-img;
+            float: left;
+        }
+        .post-header-content {
+            width: calc(100% - #{$blog-author-img});
+            float: left;
+            padding-left: 20px;
+            .post-title {
+                font-size: $blog-post-title-font;
+                margin: 10px 0 10px 3px;
+            }
+            ul.post-details {
+                display: block;
+                float: left;
+                margin: 0;
+                li {
+                    float: left;
+                    margin-right: 15px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-post-image {
+        width: 100%;
+        min-height: 300px;
+        max-height: 600px;
+    }
+    p {
+        padding-top: 20px;
+    }
+    .blog-fab-share {
+        position: absolute;
+        top: -8px;
+    }
+}
+
+.blog-comments {
+    border: none !important;
+    li {
+        margin-bottom: 20px !important;
+        border: none !important;
+        .comment-text {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $comment-border-color;
+        }
+        ul {
+            margin: 0;
+            li {
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+}
